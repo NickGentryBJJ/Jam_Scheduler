@@ -5,9 +5,7 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom';
 
 
 function App() {
-  console.log("Hello from APp")
   return (
-   
     <>
     <Switch>
       <Route path='/signup'>

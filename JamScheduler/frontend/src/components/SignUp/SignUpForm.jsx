@@ -6,7 +6,6 @@ import './SignUpForm.css'
 
 
 function SignupForm() {
-    console.log("signIUP")
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
   const [email, setEmail] = useState("");
