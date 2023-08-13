@@ -28,3 +28,10 @@ gwyn = User.create!(
   
 )
 
+song1 = Song.create!(
+  user_id: 1,
+  original_artist: 'mike',
+  song_name: 'wow',
+  desired_instrument: 'drums',
+)
+
