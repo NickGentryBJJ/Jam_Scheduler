@@ -9,9 +9,7 @@ function SignupForm() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
   const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [title, setTitle] = useState("");
+  const [stageName, setStageName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
@@ -28,9 +26,7 @@ function SignupForm() {
       formData.append('user[photo]', photoFile);
     }
     formData.append('user[email]', email);
-    formData.append('user[firstName]', firstName);
-    formData.append('user[lastName]', lastName);
-    formData.append('user[title]', title);
+    formData.append('user[stageName]', stageName);
     formData.append('user[password]', password);
     
     if (password === confirmPassword) {
@@ -69,7 +65,7 @@ function SignupForm() {
   return (
   <>
     <div className="sign-up-wrapper">
-      <h2 className="make">Make the most of your professional life</h2>
+      <h2 className="make">Are You Ready To Jam? Join Now!</h2>
         <div className="sign-up-form">
           <form onSubmit={handleSubmit}>    
           <ul>
@@ -86,31 +82,11 @@ function SignupForm() {
           </label>
           <br/>
           <label>
-            First Name<br/>
-            <input
-              type="text"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
-          </label>
-          <br/>
-          <label>
-            Last Name<br/> 
-            <input
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-            />
-          </label>
-          <br/>
-          <label>
-            Title<br/> 
+            Stage Name<br/>
           <input
             type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            value={stageName}
+            onChange={(e) => setStageName(e.target.value)}
             required
           />
           </label>
@@ -140,7 +116,7 @@ function SignupForm() {
           {preview}
           <br/>
             <div className="agree">
-              <p>By clicking Agree & Join, you agree to the EZConnex User Agreement, Privacy Policy, and Cookie Policy.</p>
+              <p>By clicking Agree & Join, you agree to the Jam Time User Agreement, Privacy Policy, and Cookie Policy.</p>
             </div>
           <button type="submit" className="agree-button">Agree & Join</button>
           </form>
