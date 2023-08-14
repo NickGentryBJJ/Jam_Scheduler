@@ -1,0 +1,7 @@
+.event-index-item-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    width: 50%;
+    background-color: blanchedalmond;
+}
