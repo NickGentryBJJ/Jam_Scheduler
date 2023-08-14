@@ -9,6 +9,9 @@
 #  date       :date             not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :bigint
 #
 class Event < ApplicationRecord
+    validates :title, :location, :details, :date, presence: true
+    belongs_to :user
 end
