@@ -9,9 +9,10 @@ import EventIndexItem from "../EventIndexItem/EventIndexItem";
 first thing i should add in is songs. users have many songs a song can belong to many users, database 
 seeded with many common songs, users will seed songs and database will grow. */}
 
-
-
 function EventIndex() {
+    const sessionUser = useSelector(state => state.session.user)
+    if (!sessionUser) return <Redirect to='/login'/>
+
     return (
         <div className="event-index-wrapper">
             <div className="event-index-container">
