@@ -5,6 +5,7 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom';
 import Splash from './components/Splash/Splash';
 import NavBar from './components/Navigation/NavBar';
 import LogIn from './components/LogIn/LogIn';
+import UserShowPage from './components/UserShowPage/UserShowPage';
 
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
     <>
     <NavBar/>
     <Switch>
+    <Route path='/users/:userId'>
+        <UserShowPage/>
+      </Route>
       <Route path='/login'>
         <LogIn/>
       </Route>
