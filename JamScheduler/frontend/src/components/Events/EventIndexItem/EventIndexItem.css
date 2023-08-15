@@ -1,9 +1,31 @@
 .event-index-item-wrapper {
     display: flex;
-    justify-content: center;
     margin-left: 25%;
     width: 50%;
     background-color: blanchedalmond;
     margin-bottom: 8%;
     margin-top: 5%;
+    padding: 20px;
+    border-radius: 38px;
+    flex-direction: column;
+}
+
+.event-info-container{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-of-event {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    align-items: baseline;
+}
+
+.event-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }

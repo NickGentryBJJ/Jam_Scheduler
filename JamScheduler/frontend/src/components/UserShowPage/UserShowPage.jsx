@@ -14,7 +14,7 @@ const UserShowPage = () => {
     
     const dispatch = useDispatch();
     const { userId } = useParams();
-    // const user = useSelector(state => state.session.selectedUser);
+    const user = useSelector(state => state.session.selectedUser);
     
     const sessionUser = useSelector(state => state.session.user);
     const [stageName, setStageName] = useState(sessionUser.stageName);
@@ -117,13 +117,15 @@ const UserShowPage = () => {
     return ( 
         <>
             {/* {eeedit} */}
+            {user ? 
             <div className="user-show-wrapper">
                     <ul className="user-show-container-po">
-                        <li><img className="prof-pic-user-show" src={sessionUser.photo} alt=''/></li>
-                        <li className='user-show-info-name'>{sessionUser.stageName}</li>
+                        <li><img className="prof-pic-user-show" src={user.user.photo} alt=''/></li>
+                        <li className='user-show-info-name'>{user.user.stageName}</li>
                     </ul>
-                    <UserSongList/>
+                    <UserSongList user={user}/>
             </div>
+            : null}
         </> 
     )
 }

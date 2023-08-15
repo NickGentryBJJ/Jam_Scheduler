@@ -1,7 +1,7 @@
 import React from "react";
 import './UserSongList.css'
 
-function UserSongList() {
+function UserSongList({user}) {
 
     return (
         <div className="user-song-list-wrapper">

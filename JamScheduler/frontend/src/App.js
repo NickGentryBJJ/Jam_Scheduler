@@ -6,6 +6,7 @@ import Splash from './components/Splash/Splash';
 import NavBar from './components/Navigation/NavBar';
 import LogIn from './components/LogIn/LogIn';
 import UserShowPage from './components/UserShowPage/UserShowPage';
+import EventShow from './components/Events/EventShow/EventShow';
 
 
 function App() {
@@ -13,8 +14,11 @@ function App() {
     <>
     <NavBar/>
     <Switch>
-    <Route path='/users/:userId'>
+      <Route path='/users/:userId'>
         <UserShowPage/>
+      </Route>
+      <Route path='/events/:eventId'>
+        <EventShow/>
       </Route>
       <Route path='/login'>
         <LogIn/>
