@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import React from "react";
 import UserEventInfo from "../UserEventInfo/UserEventInfo";
 import './EventIndexItem.css'
 
@@ -10,17 +8,17 @@ seeded with many common songs, users will seed songs and database will grow. */}
 
 
 
-function EventIndexItem() {
+function EventIndexItem({event}) {
     return (
         <div className="event-index-item-wrapper">
             <div className="event-index-item-container">
                 <div className="user-event-info-cont">
                     <UserEventInfo/>
                 </div>
-                <h1 className="event-title">Event.Title</h1>
-                <h2 className="event-location">Event.Location</h2>
-                <p className="event-details">Event.Details</p>
-                <span className="event-date">Event.Date</span><br/>
+                <h1 className="event-title">{event.title}</h1>
+                <h2 className="event-location">{event.location}</h2>
+                <p className="event-details">{event.details}</p>
+                <span className="event-date">{event.date}</span><br/>
                 <button className='event-participant-button'>Show Participants</button>
             </div>
         </div>

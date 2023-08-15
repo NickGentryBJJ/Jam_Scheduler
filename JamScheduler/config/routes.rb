@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   namespace :api, defaults: { format: :json } do
-    resources :users, only: [:show, :create, :update]
+    resources :users, only: [:show, :create, :update, :index]
     resources :songs, only: [:index, :show, :create, :update, :destroy]
     resources :events, only: [:index, :show, :create, :update, :destroy]
     resource :session, only: [:show, :create, :destroy]
