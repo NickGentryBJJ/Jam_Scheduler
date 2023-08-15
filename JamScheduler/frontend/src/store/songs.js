@@ -6,7 +6,7 @@ export const REMOVE_SONG = 'songs/REMOVE_SONG';
 
 const receiveSong = song => ({
     type: RECEIVE_SONG,
-    SONG 
+    song
 });
 
 const receiveSongs = songs => ({
