@@ -13,6 +13,7 @@ function EventShowItem({event}) {
             <h2 className="event-location">Event Location: {event.location}</h2>
             <p className="event-details">{event.details}</p>
             <span className="event-date">{event.date}</span><br/>
+            <button className="show-participants">Show Participants</button>
         </div>
     </div>
 </div>
