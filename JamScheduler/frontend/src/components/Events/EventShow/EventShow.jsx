@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import EventShowItem from "../EventShowItem/EventShowItem";
 
 function EventShow() {
-    debugger
     const { eventId } = useParams();
     const dispatch = useDispatch();
     
