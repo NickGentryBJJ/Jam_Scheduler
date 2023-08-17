@@ -4,7 +4,7 @@
     flex-direction: row;
     display: flex;
     height: 10vh;
-    background-color: navajowhite;
+    background: linear-gradient(270deg, black, rgb(177, 177, 177));
     justify-content: space-between;
     z-index: 100;
 }
@@ -31,9 +31,9 @@
 
 .sign-in {
     border-style: solid;
-    background-color: white;
-    color: #0a66c2;
-    border-color: #0a66c2;
+    background-color: #9c0f3e;
+    color: white;
+    border-color: white;
     height: min-content;
     min-height: 44px;
     border-radius: 24px;
@@ -51,7 +51,7 @@
 }
 
 .join {
-    background-color: white;
+    background-color: #9c0f3e;
     color: black;
     border: 0px;
     height: min-content;
@@ -65,13 +65,17 @@
     font-size: 16px;
     font-weight: 600;
     margin-top: 1vh;
+    margin-right: 1vw;
 
 }
-button.join:hover {
-    background-color: rgb(241, 241, 241);
+.join:hover, .logout-button:hover {
+    background-color: #680000;
+    color: white;
 }
-button.sign-in:hover, .logout-button:hover {
-    background-color: aliceblue;
+.sign-in:hover {
+    background-color: #680000;
+    color: #f96363;
+    border-color: #f96363;
 }
 
 
@@ -111,7 +115,7 @@ svg {
     border-style: solid;
     background-color: white;
     color: #0a66c2;
-    border-color: #0a66c2;
+    border-color: #680000;
     height: min-content;
     min-height: 4px;
     border-radius: 24px;

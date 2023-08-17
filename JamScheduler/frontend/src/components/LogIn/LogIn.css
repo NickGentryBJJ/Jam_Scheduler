@@ -1,12 +1,14 @@
 .log-in-page-wrapper {
     padding-top: 10vh;
-    padding-left: 4vh;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/assets/SignInPage.png');
 }
 
 .log-in-text {
     font-size: 56px;
     font-weight: 200;
-    color: #8f5849;
+    color: #9c0f3e;
     padding: 8vh;
 }
 
@@ -20,12 +22,12 @@ button:hover {
 }
 
 .sign-in-button:hover, .sign-up-button:hover {
-    background-color: #004182;
+    background-color: #680000;
 }
 
 
 .sign-in-button {
-    background-color: #0a66c2;
+    background-color: #9c0f3e;
     color: white;
     border-radius: 15px;
     border-style: none;
@@ -40,7 +42,7 @@ button:hover {
 }
 
 .sign-up-button {
-    background-color: #0a66c2;
+    background-color: #9c0f3e;
     color: white;
     border-radius: 25px;
     border-style: none;
@@ -86,11 +88,13 @@ button:hover {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 600;
+    color: antiquewhite;
 }
 .password {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 600;
+    color: antiquewhite;
 }
 
 .input-email>input {
