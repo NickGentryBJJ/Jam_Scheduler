@@ -71,7 +71,7 @@ function LogIn() {
                 <p>---------------- or -----------------</p>
                 <NavLink to="/signup">
                     <button className='sign-up-button'>
-                        New to Jam Time? Sign Up Now!
+                        New to Jam Club? Sign Up Now!
                     </button>
                 </NavLink>
             </div>

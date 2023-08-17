@@ -116,7 +116,7 @@ function SignupForm() {
           {preview}
           <br/>
             <div className="agree">
-              <p>By clicking Agree & Join, you agree to the Jam Time User Agreement, Privacy Policy, and Cookie Policy.</p>
+              <p>By clicking Agree & Join, you agree to the Jam Club User Agreement, Privacy Policy, and Cookie Policy.</p>
             </div>
           <button type="submit" className="agree-button">Agree & Join</button>
           </form>
