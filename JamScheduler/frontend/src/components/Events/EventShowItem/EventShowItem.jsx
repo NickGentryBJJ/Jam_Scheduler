@@ -9,7 +9,7 @@ function EventShowItem({event}) {
         history.push('/events')
     }
 
-    
+
     return (
         <div className="event-index-item-wrapper">
         <div className="top-of-event">
@@ -21,8 +21,10 @@ function EventShowItem({event}) {
             <h2 className="event-location">Event Location: {event.location}</h2>
             <p className="event-details">{event.details}</p>
             <span className="event-date">{event.date}</span><br/>
-            <button className="show-participants">Show Participants</button>
-            <button onClick={backToIndex} className="back-to-index-button">Back To All Events</button>
+            <div className="event-buttons">
+                <button onClick={backToIndex} className="back-to-index-button">Back To All Events</button>
+                <button className="show-participants">Show Participants</button>
+            </div>
         </div>
     </div>
 </div>
