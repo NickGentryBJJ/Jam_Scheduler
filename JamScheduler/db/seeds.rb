@@ -70,9 +70,10 @@ event2 = Event.create!(
   user_id: 2,
   title: 'Paulos Partae',
   location: 'App Academy',
-  details: 'Paulos Awesome Partae! come through and get Fucked Up!',
+  details: 'Paulos Awesome Partae! come through and drink!',
   date: "2023-09-10"
 )
+
 puts "Events Finished" 
 
 

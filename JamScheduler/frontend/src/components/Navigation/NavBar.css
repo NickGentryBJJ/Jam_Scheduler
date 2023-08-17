@@ -4,7 +4,7 @@
     flex-direction: row;
     display: flex;
     height: 10vh;
-    background: linear-gradient(270deg, black, rgb(177, 177, 177));
+    background: linear-gradient(270deg, rgb(167, 242, 255), rgb(124, 255, 222));
     justify-content: space-between;
     z-index: 100;
 }
