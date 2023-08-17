@@ -3,7 +3,10 @@
     padding-left: 4vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    background-image: url('/assets/SignInPage.png');
+    height: 125vh;
+    width: 97vw;
 }
 
 label {
@@ -32,19 +35,18 @@ input {
     margin: 1%;
 }
 .sign-up-form {
-    background-color: white;
+    background-color: #838383;
     padding-left: 24px !important;
     padding-right: 24px !important;
     max-width: 400px;
     width: auto;
-    margin: 0 auto;
     padding-top: 24px;
     position: relative;
-    border-radius: 0;
+    border-radius: 40px;
 }
 
 .make {
-    color: black;
+    color: #9c0f3e;
     font-weight: 500;
     font-size: 36px;
     max-width: 767px;
@@ -56,7 +58,7 @@ input {
 }
 
 .agree-button {
-    background-color: #0a66c2;
+    background-color: #9c0f3e;
     color: white;
     border-radius: 15px;
     border-style: none;
@@ -70,7 +72,7 @@ input {
 }
 
 .agree-button:hover {
-    background-color: #004182;
+    background-color: #680000;
 }
 
 div.agree {
@@ -83,3 +85,19 @@ div.agree {
     border-radius: 50%;
 }
 
+
+.middle-sign-up { 
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.jam-message {
+    color: #bb137d;
+    font-weight: 800;
+    font-size: 36px;
+    flex-direction: column;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+}
