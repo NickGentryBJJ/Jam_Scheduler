@@ -1,7 +1,15 @@
 import React from "react";
 import UserEventInfo from "../UserEventInfo/UserEventInfo";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function EventShowItem({event}) {
+    const history = useHistory();
+
+    function backToIndex() {
+        history.push('/events')
+    }
+
+    
     return (
         <div className="event-index-item-wrapper">
         <div className="top-of-event">
@@ -14,6 +22,7 @@ function EventShowItem({event}) {
             <p className="event-details">{event.details}</p>
             <span className="event-date">{event.date}</span><br/>
             <button className="show-participants">Show Participants</button>
+            <button onClick={backToIndex} className="back-to-index-button">Back To All Events</button>
         </div>
     </div>
 </div>
