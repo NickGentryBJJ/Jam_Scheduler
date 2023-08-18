@@ -82,16 +82,18 @@ export const deleteSong = songId => async (dispatch) => {
 
 
 
-const songsReducer = (state = {}, action) => {
-    Object.freeze(state)
+const songsReducer = (state = [], action) => {
+    Object.freeze(state);
 
-    const nextState = Object.assign({}, state)
+    let nextState = [...state]; // Create a copy of the current state array
 
     switch (action.type) {
         case RECEIVE_SONGS:
-            return {...action.songs};
-        case RECEIVE_SONG:
-            return {...state, [action.song.id]: action.song };
+            const songsArray = Object.values(action.songs); // Convert the object values into an array
+            return [...songsArray];
+            case RECEIVE_SONG:
+            nextState.push(action.song); // Add the new song to the array
+            return nextState;
         case REMOVE_SONG:
             delete nextState[action.songId];
             return nextState;
