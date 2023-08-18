@@ -5,3 +5,7 @@
 .user-event-info-wrapper {
     margin-bottom: 15px;
 }
+
+.event-user-name:hover{
+    cursor: pointer;
+}

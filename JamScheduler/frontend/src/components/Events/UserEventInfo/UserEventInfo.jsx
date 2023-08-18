@@ -13,7 +13,7 @@ function UserEventInfo({event}) {
         <div className="user-event-info-wrapper">
             <img src={event.user.photo} alt="" />
             <h1 className="event-poster-name">
-                <span onClick={handleUser}>{event.user.stageName}</span> Posted An Event!
+                <span className="event-user-name" onClick={handleUser}>{event.user.stageName}</span> Posted An Event!
             </h1>
         </div>
     )
