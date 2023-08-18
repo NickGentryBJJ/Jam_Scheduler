@@ -1,7 +1,7 @@
 .log-in-page-wrapper {
     padding-top: 10vh;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url('/assets/SignInPage.png');
 }
 
