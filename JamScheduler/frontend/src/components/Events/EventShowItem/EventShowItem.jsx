@@ -6,7 +6,7 @@ function EventShowItem({event}) {
     const history = useHistory();
 
     function backToIndex() {
-        history.push('/events')
+        history.push('/')
     }
 
 

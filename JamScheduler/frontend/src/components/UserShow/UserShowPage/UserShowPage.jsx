@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchUsers, updateUser } from '../../../store/users';
 import UserSongList from '../UserSongList/UserSongList';
+import { fetchSongs } from '../../../store/songs';
 
 
 
@@ -25,6 +26,7 @@ const UserShowPage = () => {
     
     useEffect(() => {
         dispatch(getUser(userId))
+        dispatch(fetchSongs())
         // dispatch(fetchUsers())
     }, [dispatch, userId, editing])
 

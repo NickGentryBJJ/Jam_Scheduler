@@ -6,9 +6,7 @@ import SongIndexItem from "../SongIndexItem/SongIndexItem";
 
 function UserSongList({user}) {
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchSongs())
-    }, [dispatch, user])
+ 
     
     const songs = useSelector(state => state.songs)
     const getUserSongs = (ss, user) => {

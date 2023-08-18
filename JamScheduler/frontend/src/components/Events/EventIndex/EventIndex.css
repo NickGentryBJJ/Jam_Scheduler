@@ -6,8 +6,8 @@
 
 .create-event-button {
     color: rgb(157, 4, 177);
-    font-weight: 50;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 2rem;
     cursor: pointer;
     display: flex;
     margin-left: 25%;
