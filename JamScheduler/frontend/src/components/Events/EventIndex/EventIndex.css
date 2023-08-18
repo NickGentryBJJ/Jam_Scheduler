@@ -1,4 +1,26 @@
 .event-index-wrapper{
-    /* background-image: url('/assets/EventIndexBackground.png'); */
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.create-event-button {
+    color: rgb(157, 4, 177);
+    font-weight: 50;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    margin-left: 25%;
+    width: 53%;
+    background: linear-gradient(45deg, #ff2020, orange);
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: 38px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-event-button:hover {
+    background: linear-gradient(45deg, black, transparent);
+    color: #ff2020;
 }
