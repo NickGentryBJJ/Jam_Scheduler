@@ -28,7 +28,7 @@ function EventIndexItem({event}) {
                     <h2 className="event-location">Event Location: {event.location}</h2>
                     <p className="event-details">{event.details}</p>
                     <span className="event-date">{event.date}</span><br/>
-                    <button onClick={handleClick} className='event-participant-button'>View Event Page</button>
+                    <button onClick={handleClick} className='event-page-button'>View Event Page</button>
                 </div>
             </div>
         </div>

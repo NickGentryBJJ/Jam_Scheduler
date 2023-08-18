@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function UserEventInfo({event}) {
     const history = useHistory();
+    
     const handleUser = () => {
         history.push(`users/${event.user.id}`)
     }
