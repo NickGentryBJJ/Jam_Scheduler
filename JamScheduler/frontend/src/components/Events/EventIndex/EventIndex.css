@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-left: 5%;
 }
 
 .create-event-button {
@@ -11,9 +12,9 @@
     cursor: pointer;
     display: flex;
     margin-left: 12%;
-    width: 53%;
+    width: 70%;
     background: linear-gradient(45deg, #ff2020, orange);
-    margin-top: 5%;
+    margin-top: 10vh;
     padding: 20px;
     border-radius: 38px;
     flex-direction: column;

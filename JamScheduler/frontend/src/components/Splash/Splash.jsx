@@ -7,6 +7,7 @@ import UserSplashCard from "./UserSplashCard/UserSplashCard";
 import { fetchSongs } from "../../store/songs";
 import { fetchEvents } from "../../store/events";
 import { fetchUsers } from "../../store/users";
+import AboutJamTime from "./AboutJamTime/AboutJameTime";
 
 function Splash() {
     const dispatch = useDispatch();
@@ -19,6 +20,7 @@ function Splash() {
         <div className="splash-wrapper">
             <UserSplashCard/>
             <EventIndex/>
+            <AboutJamTime/>
         </div>
     )
 }
