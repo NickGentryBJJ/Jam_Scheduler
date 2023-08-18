@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import './UserSongList.css'
-import { fetchSongs } from "../../store/songs";
+import { fetchSongs } from "../../../store/songs";
 import { useDispatch, useSelector } from "react-redux";
+import SongIndexItem from "../SongIndexItem/SongIndexItem";
 
 function UserSongList({user}) {
     const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function UserSongList({user}) {
     return (
         <div className="user-song-list-wrapper">
             {userSongs.map(song => (
-                <li className="user-song">{song.songName}</li>
+                <li className="user-song"><SongIndexItem song={song}/></li>
             ))}
         </div>
     )

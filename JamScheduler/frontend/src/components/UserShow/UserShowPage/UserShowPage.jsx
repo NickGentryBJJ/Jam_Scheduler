@@ -1,9 +1,9 @@
 import './UserShowPage.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { getUser } from '../../store/session';
+import { getUser } from '../../../store/session';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchUsers, updateUser } from '../../store/users';
+import { fetchUsers, updateUser } from '../../../store/users';
 import UserSongList from '../UserSongList/UserSongList';
 
 
@@ -122,8 +122,8 @@ const UserShowPage = () => {
                     <ul className="user-show-container-po">
                         <li><img className="prof-pic-user-show" src={user.user.photo} alt=''/></li>
                         <li className='user-show-info-name'>{user.user.stageName}</li>
+                        <UserSongList user={user}/>
                     </ul>
-                    <UserSongList user={user}/>
             </div>
             : null}
         </> 

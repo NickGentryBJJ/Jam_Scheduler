@@ -5,7 +5,7 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom';
 import Splash from './components/Splash/Splash';
 import NavBar from './components/Navigation/NavBar';
 import LogIn from './components/LogIn/LogIn';
-import UserShowPage from './components/UserShowPage/UserShowPage';
+import UserShowPage from './components/UserShow/UserShowPage/UserShowPage';
 import EventShow from './components/Events/EventShow/EventShow';
 
 
