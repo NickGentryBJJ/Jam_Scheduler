@@ -1,6 +1,5 @@
 .splash-wrapper {
     display: flex;
-    height: 800px;
     width: 100%;
     padding-top: 10vh;
     background: linear-gradient(45deg, rgb(79 247 129), #2723ff);
