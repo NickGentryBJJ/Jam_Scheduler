@@ -4,7 +4,7 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     border: 1px solid rgb(223, 223, 223);
-    background-color: white;
+    background: radial-gradient(rgb(0, 174, 255), rgb(2, 255, 53));
     width: 300px;
     max-height: fit-content;
     padding: 13px;
@@ -50,7 +50,7 @@
 
 .languages-row {
     font-size: 13.5px;
-    color: rgb(149, 149, 149);
+    color: rgb(2, 255, 53);
     margin-bottom: 9px;
 }
 
