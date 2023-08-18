@@ -10,7 +10,6 @@ import UserSongList from '../UserSongList/UserSongList';
 
 
 const UserShowPage = () => {
-    // debugger
     
     const dispatch = useDispatch();
     const { userId } = useParams();
@@ -120,8 +119,7 @@ const UserShowPage = () => {
             {user ? 
             <div className="user-show-wrapper">
                     <ul className="user-show-container-po">
-                        <li><img className="prof-pic-user-show" src={user.user.photo} alt=''/></li>
-                        <li className='user-show-info-name'>{user.user.stageName}</li>
+                        <li className='user-show-info-name'>{user.user.stageName}'s Song List</li>
                         <UserSongList user={user}/>
                     </ul>
             </div>

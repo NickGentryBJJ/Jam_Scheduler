@@ -12,7 +12,6 @@ function UserSongList({user}) {
     
     const songs = useSelector(state => state.songs)
     const getUserSongs = (ss, user) => {
-        console.log(ss)
         let userSongs = [];
         for (let i = 0; i < ss.length; i++) {
             const song = ss[i];
