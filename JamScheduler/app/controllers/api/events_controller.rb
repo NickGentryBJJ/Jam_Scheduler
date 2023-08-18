@@ -36,7 +36,7 @@ class Api::EventsController < ApplicationController
     end
 
     private 
-    def song_params
-        params.require(:song).permit(:title, :location, :details, :date)
+    def event_params
+        params.require(:event).permit(:title, :location, :details, :date, :user_id)
     end     
 end
