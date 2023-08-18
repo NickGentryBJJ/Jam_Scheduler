@@ -16,6 +16,7 @@ function EventIndexItem({event}) {
         history.push(`events/${event.id}`)
     }
 
+  
     return (
         <div className="event-index-item-wrapper">
                 <div className="top-of-event">
