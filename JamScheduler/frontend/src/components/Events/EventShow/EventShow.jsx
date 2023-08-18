@@ -8,7 +8,7 @@ import EventShowItem from "../EventShowItem/EventShowItem";
 function EventShow() {
     const { eventId } = useParams();
     const dispatch = useDispatch();
-    
+    debugger
     useEffect(() => {
         dispatch(fetchEvent(eventId))
     }, [dispatch, eventId])
