@@ -1,0 +1,21 @@
+.song-index-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 5%;
+    background: linear-gradient(45deg, #ff2020, orange);
+    border-radius: 10px;
+}
+
+.song-title {
+    padding-bottom: 5px;
+}
+
+.song-artist {
+    padding-bottom: 5px;
+}
+
+.desired-instrument {
+    padding-bottom: 5px;
+}

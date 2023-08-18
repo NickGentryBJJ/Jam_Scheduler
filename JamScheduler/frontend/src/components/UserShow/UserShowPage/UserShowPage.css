@@ -43,11 +43,9 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%, -95%);
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    padding-top: 18px;
 }
 .user-show-container-po {
     margin: 25%;
@@ -57,11 +55,9 @@
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    padding-top: 18px;
 }
 .edit-user-show-container {
     margin-top: 20%;
@@ -82,16 +78,11 @@
 
 .user-show-info-name {
     padding: 10px;
+    margin-bottom: 5%;
+    display: flex;
     font-weight: 600;
+    justify-content: center;
     font-size: 20px;
-}
-.user-show-info-title {
-    padding: 10px;
-    font-size: 16px;
-    color: rgb(132, 132, 132);
-}
-.user-show-info-bio {
-    padding: 10px;
 }
 
 .pic-edit-label {
