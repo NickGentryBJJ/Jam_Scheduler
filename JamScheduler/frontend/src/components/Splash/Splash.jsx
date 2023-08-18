@@ -17,7 +17,7 @@ function Splash() {
     }, [dispatch])
     return (
         <div className="splash-wrapper">
-            {/* <UserSplashCard/> */}
+            <UserSplashCard/>
             <EventIndex/>
         </div>
     )

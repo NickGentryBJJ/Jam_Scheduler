@@ -5,12 +5,12 @@
 }
 
 .create-event-button {
-    color: rgb(157, 4, 177);
+    color: rgb(247, 187, 255);
     font-weight: 500;
     font-size: 2rem;
     cursor: pointer;
     display: flex;
-    margin-left: 25%;
+    margin-left: 12%;
     width: 53%;
     background: linear-gradient(45deg, #ff2020, orange);
     margin-top: 5%;
