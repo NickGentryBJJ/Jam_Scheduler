@@ -19,7 +19,7 @@
 }
 
 .user-show-wrapper {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding-top: 10vh;
     display: flex;
@@ -48,10 +48,9 @@
     flex-direction: column;
 }
 .user-show-container-po {
-    margin: 25%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin: 0%; 
     width: 50%;
+    margin-left: 25%;
     background: linear-gradient(45deg, rgb(79 247 129), #2723ff);
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);

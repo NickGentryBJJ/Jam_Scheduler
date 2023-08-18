@@ -1,3 +1,40 @@
 .event-buttons {
     display: flex;
 }
+
+.event-show-item-wrapper {
+    display: flex;
+    width: 65%;
+    background: linear-gradient(45deg, #ff2020, orange);
+    margin-bottom: 8%;
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: 38px;
+    flex-direction: column;
+}
+.show-guests {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.back-to-index-button, .show-guests, .event-comment-button {
+    background: linear-gradient(45deg, black, transparent);
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    height: 30px;
+    padding: 3px;
+    width: 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 15px;
+    margin-bottom: 2vh;
+}
+
+.back-to-index-button:hover, .show-guests:hover, .event-comment-button:hover {
+    cursor: pointer;
+    background: linear-gradient(45deg, #ffe700, transparent);
+    color: crimson;
+    border: black;
+    border-style: groove;
+}
