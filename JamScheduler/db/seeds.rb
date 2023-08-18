@@ -21,14 +21,9 @@ ApplicationRecord.connection.reset_pk_sequence!('songs')
 
 puts "Creating users..."
 # Create one user with an easy to remember username, email, and password:
-gwyn = User.create!(
-  stage_name: 'Gwyn',
-  email: 'gwyn@email.com', 
-  password: 'password'
-  
-)
-email = User.create!(
-  stage_name: 'Email',
+
+rick = User.create!(
+  stage_name: 'Ricky G',
   email: 'email@email.com', 
   password: 'password'
   
@@ -50,7 +45,7 @@ song1 = Song.create!(
   desired_instrument: 'drums',
 )
 song2 = Song.create!(
-  user_id: 2,
+  user_id: 1,
   original_artist: 'mike',
   song_name: 'NPM Start',
   desired_instrument: 'drums',
@@ -67,7 +62,7 @@ event1 = Event.create!(
   date: "2023-09-25"
 )
 event2 = Event.create!(
-  user_id: 2,
+  user_id: 1,
   title: 'Paulos Partae',
   location: 'App Academy',
   details: 'Paulos Awesome Partae! come through and drink!',
