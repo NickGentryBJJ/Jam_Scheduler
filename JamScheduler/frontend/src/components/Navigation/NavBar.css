@@ -48,6 +48,9 @@
 
 .logo {
     cursor: pointer;
+    background-image: url('/assets/favicon_io/favicon.ico');
+    width: 3rem;
+    height: 3rem;
 }
 
 .join {

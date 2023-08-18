@@ -35,7 +35,6 @@ function NavBar() {
         <div className='nav-wrapper'>
             <div className='nav-left'>
                 <div onClick={() => {history.push('/')}} className='logo'>
-                    Jam Club
                 </div>
                     {/* <div className='search-bar'>
                         {searchbar}
