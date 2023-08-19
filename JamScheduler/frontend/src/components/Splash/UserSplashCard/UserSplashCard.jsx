@@ -1,10 +1,12 @@
 import React from "react";
 import './UserSplashCard.css';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 
 function UserSplashCard() {
     const sessionUser = useSelector(state => state.session.user);
-    const dispatch = useDispatch();
+    const history = useHistory();
 
     const songs = useSelector(state => state.songs)
     const getUserSongs = (ss, user) => {
@@ -33,7 +35,7 @@ function UserSplashCard() {
         <>
         {songs ? 
             <div className="user-splash-card-wrapper">
-                <h1 className="user-splash-name">Lets Jam {sessionUser.stageName}!</h1>
+                <h1 className="user-splash-name">Lets Jam <span className="user-splash-click-name" onClick={() => {history.push(`/users/${sessionUser.id}`)}}>{sessionUser.stageName}</span>!</h1>
                 
                 <ul> <span className="user-splash-songs">Your Newest Songs:</span>
                 {selectedSongs.map(song => (

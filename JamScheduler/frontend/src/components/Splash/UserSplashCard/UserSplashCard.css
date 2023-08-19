@@ -16,6 +16,10 @@
     font-size: 1.5rem;
 }
 
+.user-splash-click-name{
+    cursor: pointer;
+}
+
 .user-splash-songs{
     color: rgb(247, 187, 255);
     font-weight: 500;
