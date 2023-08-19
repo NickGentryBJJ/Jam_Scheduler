@@ -8,6 +8,7 @@
     height: min-content;
     padding: 20px;
     border-radius: 35px;
+    width: 15%;
 }
 
 .add-songs-header {
@@ -20,4 +21,37 @@
     border-bottom-style: groove;
     border-bottom-width: 3px;
     border-bottom-color: black;
+}
+
+.create-song-name-text, .create-song-og-artist-text, .create-song-instrument-text {
+    resize: none;
+    width: 98%;
+}
+
+.create-song-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-button {
+    height: 30px;
+    color: rgb(247, 187, 255);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    background: linear-gradient(45deg, #ff4c20, orange);
+    border-radius: 38px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.song-button:hover {
+    background: linear-gradient(45deg, black, transparent);
+    color: #ff2020;
+}
+
+.create-label-song {
+    margin-bottom: 5px;
 }

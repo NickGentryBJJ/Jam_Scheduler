@@ -38,6 +38,9 @@ export default function CreateSong() {
             <form onSubmit={handleSubmit} className="create-song-form">
                 <div className="song-label-container">
                     <label className='create-song-name'>
+                        <h3 className='create-label-song'>
+                            Title
+                        </h3>
                         <textarea
                             placeholder='I Like It'
                             className='create-song-name-text'
@@ -50,6 +53,9 @@ export default function CreateSong() {
                         ></textarea>
                     </label>
                     <label className='create-song-og-artist'>
+                        <h3 className='create-label-song'>
+                            Artist
+                        </h3>
                         <textarea
                             placeholder='El Debarge'
                             className='create-song-og-artist-text'
@@ -62,9 +68,12 @@ export default function CreateSong() {
                         ></textarea>
                     </label>
                     <label className='create-song-instrument'>
+                        <h3 className='create-label-song'>
+                            Your Instrument Selection
+                        </h3>
                         <textarea
                             placeholder='Bass'
-                            className='create-song-instrument'
+                            className='create-song-instrument-text'
                             type='textarea'
                             value={desiredInstrument}
                             onInput={(e) => {
