@@ -12,6 +12,7 @@ import UpcomingEvents from '../UpcomingEvents/UpcomingEvents';
 
 
 const UserShowPage = () => {
+    debugger
     const dispatch = useDispatch();
     const { userId } = useParams();
     const user = useSelector(state => state.session.selectedUser);
@@ -44,7 +45,7 @@ const UserShowPage = () => {
                 <div className="user-show-container">
                     <UserSongList user={user}/>
                 </div>
-                <UpcomingEvents/>
+                <UpcomingEvents user={user}/>
             </div>
         </>
         )
