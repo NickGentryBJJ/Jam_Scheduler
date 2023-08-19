@@ -7,6 +7,7 @@ import { fetchUsers, updateUser } from '../../../store/users';
 import UserSongList from '../UserSongList/UserSongList';
 import { fetchSongs } from '../../../store/songs';
 import CreateSong from '../CreateSong/CreateSong';
+import UpcomingEvents from '../UpcomingEvents/UpcomingEvents';
 
 
 
@@ -126,6 +127,7 @@ const UserShowPage = () => {
                         <li className='user-show-info-name'>{user.user.stageName}'s Song List</li>
                         <UserSongList user={user}/>
                     </ul>
+                    <UpcomingEvents/>
             </div>
             : null}
         </> 

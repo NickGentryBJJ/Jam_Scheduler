@@ -72,7 +72,6 @@ export default function CreateSong() {
                             }}
                             required
                         ></textarea>
-                        {/* <input type="file" onChange={handleFile} /> */}
                     </label>
                     <button className='song-button' type='submit' >Add Song to Your List!</button>
                 </div>
