@@ -25,5 +25,8 @@
     font-weight: 600;
     justify-content: center;
     font-size: 2rem;
+    border-bottom-style: groove;
+    border-bottom-width: 3px;
+    border-bottom-color: black;
 }
 
