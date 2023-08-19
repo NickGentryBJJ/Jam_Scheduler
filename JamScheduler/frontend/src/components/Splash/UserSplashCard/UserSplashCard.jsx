@@ -17,7 +17,7 @@ function UserSplashCard() {
         }
         return userSongs;
     }
-    const userSongs = getUserSongs(songs, sessionUser);
+    const userSongs = getUserSongs(songs, sessionUser).reverse();
     let selectedSongs = []
     let waveRace = userSongs.length;
     // waveRace is max songs. But I was listening to waveRace64 music when i was coding this. Jam On! #bannanable
@@ -25,7 +25,7 @@ function UserSplashCard() {
         waveRace = 7
     }
     for (let i = 0; i < waveRace; i++) {
-        const song = userSongs.reverse()[i];
+        const song = userSongs[i];
         selectedSongs.push(song);
     }
     
