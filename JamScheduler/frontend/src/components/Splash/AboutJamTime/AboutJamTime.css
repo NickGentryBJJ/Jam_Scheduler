@@ -45,12 +45,11 @@
     align-items: center;
     flex-direction: column;
     margin-top: 19px;
-    margin-left: 40px;
 }
 
 .languages-row {
     font-size: 13.5px;
-    color: rgb(2, 255, 53);
+    color:rgb(255, 0, 166);
     margin-bottom: 9px;
 }
 
