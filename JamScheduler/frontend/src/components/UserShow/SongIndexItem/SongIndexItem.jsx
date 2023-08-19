@@ -10,8 +10,8 @@ function SongIndexItem(song) {
     const sessionUser = useSelector(state => state.session.user)
     const history = useHistory();
     const handleDelete = () => {
-        dispatch(deleteSong(song.song.id));
         history.go();
+        dispatch(deleteSong(song.song.id));
     }
 
 
