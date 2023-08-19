@@ -54,7 +54,6 @@
     padding: 15px;
     display: flex;
     flex-direction: column;
-    margin-right: 22%;
     height: max-content;
 }
 .edit-user-show-container {
