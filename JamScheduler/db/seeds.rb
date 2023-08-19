@@ -40,15 +40,71 @@ puts "Makin dem songs now bitch"
 
 song1 = Song.create!(
   user_id: 2,
-  original_artist: 'mike',
-  song_name: 'wow',
-  desired_instrument: 'drums',
+  original_artist: 'DeBarge',
+  song_name: 'I Like It',
+  desired_instrument: 'Guitar',
 )
 song2 = Song.create!(
   user_id: 1,
   original_artist: 'mike',
   song_name: 'NPM Start',
   desired_instrument: 'drums',
+)
+
+song3 = Song.create!(
+  user_id: 2,
+  original_artist: 'The Beatles',
+  song_name: 'Hey Jude',
+  desired_instrument: 'Drums',
+)
+
+song4 = Song.create!(
+  user_id: 2,
+  original_artist: 'Queen',
+  song_name: 'Bohemian Rhapsody',
+  desired_instrument: 'Vocals',
+)
+
+song5 = Song.create!(
+  user_id: 2,
+  original_artist: 'Elton John',
+  song_name: 'Rocket Man',
+  desired_instrument: 'Synthesizer',
+)
+
+song6 = Song.create!(
+  user_id: 2,
+  original_artist: 'Fleetwood Mac',
+  song_name: 'Go Your Own Way',
+  desired_instrument: 'Bass Guitar',
+)
+
+song7 = Song.create!(
+  user_id: 2,
+  original_artist: 'Led Zeppelin',
+  song_name: 'Stairway to Heaven',
+  desired_instrument: 'Flute',
+)
+
+song8 = Song.create!(
+  user_id: 2,
+  original_artist: 'Beyoncé',
+  song_name: 'Crazy in Love',
+  desired_instrument: 'Trumpet',
+)
+
+song9 = Song.create!(
+  user_id: 2,
+  original_artist: 'Prince',
+  song_name: 'Purple Rain',
+  desired_instrument: 'Electric Guitar',
+)
+
+song10 = Song.create!(
+  user_id: 2,
+  original_artist: 'Adele',
+  song_name: 'Someone Like You',
+  desired_instrument: 'Violin',
 )
 
 puts "songs Created"

@@ -10,12 +10,15 @@ import { fetchUsers } from "../../store/users";
 import AboutJamTime from "./AboutJamTime/AboutJameTime";
 
 function Splash() {
+    const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchEvents())
         dispatch(fetchUsers())
         dispatch(fetchSongs())
     }, [dispatch])
+    if (!sessionUser) return <Redirect to='/login'/>
+
     return (
         <div className="splash-wrapper">
             <UserSplashCard/>

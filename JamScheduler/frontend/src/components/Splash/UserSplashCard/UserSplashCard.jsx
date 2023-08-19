@@ -38,7 +38,7 @@ function UserSplashCard() {
                 
                 <ul> <span className="user-splash-songs">Your Song List:</span>
                 {selectedSongs.map(song => (
-                        <li className="user-splash-song"><span className="user-splash-song-name">{song.songName}</span> <span className="orig-artist-splash">by {song.originalArtist}</span> </li>
+                        <li className="user-splash-song"><span className="user-splash-song-name">{song.songName}</span> <br/><span className="orig-artist-splash">by {song.originalArtist}</span> </li>
                         ))}
                 </ul>
             </div>
