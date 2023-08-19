@@ -29,7 +29,7 @@ const UserShowPage = () => {
         starFox = (
             <>
             <div className="user-show-wrapper">
-                <ul className="user-show-container-po">
+                <ul className="user-show-container">
                     <li className='user-show-info-name'>{user.user.stageName}'s Song List</li>
                     <UserSongList user={user}/>
                 </ul>
@@ -42,7 +42,7 @@ const UserShowPage = () => {
         <>
             <div className="user-show-wrapper">
                 <CreateSong/>
-                <ul className="user-show-container-po">
+                <ul className="user-show-container">
                     <li className='user-show-info-name'>{user.user.stageName}'s Song List</li>
                     <UserSongList user={user}/>
                 </ul>

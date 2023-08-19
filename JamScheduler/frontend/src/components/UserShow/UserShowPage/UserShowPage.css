@@ -1,23 +1,3 @@
-.prof-pic-user-show {
-    width: 40%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 50%;
-    max-height: 250px;
-}
-
-.prof-pic-edit{
-    display: flex;
-}
-.edit-prof-pic-user-show {
-    width: 35%;
-    max-width: 35%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 50%;
-    max-height: 200px;
-}
-
 .user-show-wrapper {
     width: 100%;
     height: 100%;
@@ -26,28 +6,8 @@
     justify-content: space-around;
     background: radial-gradient(#0c00ff, transparent);
 }
-.edit-user-show-wrapper {
-    width: 100vw;
-    padding-top: 10vh;
-    display: flex;
-    justify-content: center;
-}
 
 .user-show-container {
-    margin-top: 17%;
-    width: 50%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -95%);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-}
-.user-show-container-po {
     width: 40%;
     background: linear-gradient(45deg, rgb(79 247 129), #2723ff);
     border-radius: 10px;
@@ -57,22 +17,6 @@
     flex-direction: column;
     height: max-content;
 }
-.edit-user-show-container {
-    margin-top: 20%;
-    width: 35%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -95%);
-    padding-left: 15px;
-    padding-right: 15px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 18px;
-}
 
 .user-show-info-name {
     padding: 10px;
@@ -80,60 +24,6 @@
     display: flex;
     font-weight: 600;
     justify-content: center;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
-.pic-edit-label {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    left: 40%;
-    position: absolute;
-}
-
-.preview-image-edit {
-    min-width: 23%;
-    max-width: 23%;
-    max-height: 11vh;
-    min-height: 11vh;
-    border-radius: 50%;
-}
-
-.edit-user-button {
-    border-style: solid;
-    background-color: white;
-    color: #0a66c2;
-    border-color: #0a66c2;
-    height: min-content;
-    min-height: 4px;
-    border-radius: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 600;
-    max-width: 20%;
-    margin-bottom: 5px;
-}
-.edit-user-button:hover {
-    background-color: aliceblue;
-}
-
-.update-user-button { 
-    border: none;
-    color: white;
-    background-color: #0b66c2;
-    width: 67px;
-    height: 33px;
-    border-radius: 18px;
-    font-size: 15.8px;
-    cursor: pointer;
-}
-
-.update-user-button:hover {
-    background-color: #015b90;
-}
