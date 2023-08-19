@@ -9,13 +9,17 @@
 }
 
 .song-title {
+    color: azure;
     padding-bottom: 5px;
 }
 
 .song-artist {
+    color: azure;
     padding-bottom: 5px;
 }
 
+
 .desired-instrument {
+    color: azure;
     padding-bottom: 5px;
 }

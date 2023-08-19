@@ -5,7 +5,6 @@
     border-radius: 8px;
     border: 1px solid rgb(223, 223, 223);
     background: linear-gradient(45deg, rgb(255, 0, 0), transparent);
-    width: 300px;
     max-height: fit-content;
     padding: 13px;
     margin-top: 10vh;
@@ -13,7 +12,9 @@
 }
 
 .mainpage-right-side-container {
+    margin-left: 1%;
     margin-right: 2%;
+    width: 30%;
 }
 
 
