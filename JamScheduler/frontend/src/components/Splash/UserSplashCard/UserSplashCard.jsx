@@ -20,6 +20,7 @@ function UserSplashCard() {
     const userSongs = getUserSongs(songs, sessionUser);
     let selectedSongs = []
     let waveRace = userSongs.length;
+    // waveRace is max songs. But I was listening to waveRace64 music when i was coding this. Jam On! #bannanable
     if (userSongs.length > 6) {
         waveRace = 6
     }
@@ -27,8 +28,6 @@ function UserSplashCard() {
         const song = userSongs[i];
         selectedSongs.push(song);
     }
-
-    
     
     return (
         <>

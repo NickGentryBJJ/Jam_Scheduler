@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from '../../store/session';
-import { NavLink, Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink, Redirect, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function ProfileButton({ user }) {
     const dispatch = useDispatch();
     const [showMenu, setShowMenu] = useState(false);
     const sessionUser = useSelector(state => state.session.user)
+    const history = useHistory();
 
 
     const openMenu = () => {
@@ -30,6 +31,9 @@ function ProfileButton({ user }) {
         dispatch(sessionActions.logout());
         return <Redirect to="/login" />
     };
+    const handleName = () => {
+        history.push(`/users/${sessionUser.id}`)
+    } 
 
     return (
         <div className="profile-menu-wrapper">
@@ -39,8 +43,7 @@ function ProfileButton({ user }) {
         {showMenu && (
         <div className="profile-menu-container">
             <ul className="profile-dropdown">
-                <li>{user.email}</li>
-                <li>{user.stageName}</li>
+                <li className="nav-stage-name" onClick={handleName}>{user.stageName}</li>
                 <button className='logout-button' onClick={logout}>Log Out</button>
             </ul>
         </div>
