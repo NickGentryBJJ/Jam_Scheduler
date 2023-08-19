@@ -20,10 +20,11 @@
 
 .user-show-wrapper {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: 20vh;
     display: flex;
     justify-content: space-around;
+    background: radial-gradient(#0c00ff, transparent);
 }
 .edit-user-show-wrapper {
     width: 100vw;

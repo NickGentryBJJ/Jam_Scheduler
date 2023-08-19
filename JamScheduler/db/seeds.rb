@@ -38,18 +38,6 @@ nick = User.create!(
 puts "Users Created MothaFucka"
 puts "Makin dem songs now bitch"
 
-song1 = Song.create!(
-  user_id: 2,
-  original_artist: 'DeBarge',
-  song_name: 'I Like It',
-  desired_instrument: 'Guitar',
-)
-song2 = Song.create!(
-  user_id: 1,
-  original_artist: 'mike',
-  song_name: 'NPM Start',
-  desired_instrument: 'drums',
-)
 
 song3 = Song.create!(
   user_id: 2,
@@ -107,8 +95,14 @@ song10 = Song.create!(
   desired_instrument: 'Violin',
 )
 
-puts "songs Created"
-puts "creating events now!"
+song1 = Song.create!(
+  user_id: 2,
+  original_artist: 'DeBarge',
+  song_name: 'I Like It',
+  desired_instrument: 'Guitar',
+)
+puts "Songs Created!"
+puts "Creating Events Now!"
 
 event1 = Event.create!(
   user_id: 2,
@@ -125,6 +119,7 @@ event2 = Event.create!(
   date: "2023-09-10"
 )
 
-puts "Events Finished" 
+puts "Events Finished! Exciting!"
+puts "All Seeds Created No Issues!" 
 
 

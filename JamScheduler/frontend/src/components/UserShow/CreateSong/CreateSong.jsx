@@ -24,7 +24,7 @@ export default function CreateSong() {
         formData.append('song[originalArtist]', originalArtist);
         formData.append('song[desiredInstrument]', desiredInstrument);
         formData.append('song[userId]', sessionUser.id );
-        dispatch(createSong(formData)).then(() => history.go(`users/${sessionUser.id}`));    
+        dispatch(createSong(formData)).then(() => history.go(`/users/${sessionUser.id}`));    
         
     }    
     

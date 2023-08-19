@@ -24,7 +24,7 @@ function UserSongList({user}) {
     
     return (
         <div className="user-song-list-wrapper">
-            {userSongs.map(song => (
+            {userSongs.reverse().map(song => (
                 <li className="user-song"><SongIndexItem song={song}/></li>
             ))}
         </div>

@@ -21,11 +21,11 @@ function UserSplashCard() {
     let selectedSongs = []
     let waveRace = userSongs.length;
     // waveRace is max songs. But I was listening to waveRace64 music when i was coding this. Jam On! #bannanable
-    if (userSongs.length > 6) {
-        waveRace = 6
+    if (userSongs.length > 7) {
+        waveRace = 7
     }
     for (let i = 0; i < waveRace; i++) {
-        const song = userSongs[i];
+        const song = userSongs.reverse()[i];
         selectedSongs.push(song);
     }
     
@@ -35,7 +35,7 @@ function UserSplashCard() {
             <div className="user-splash-card-wrapper">
                 <h1 className="user-splash-name">Lets Jam {sessionUser.stageName}!</h1>
                 
-                <ul> <span className="user-splash-songs">Your Song List:</span>
+                <ul> <span className="user-splash-songs">Your Newest Songs:</span>
                 {selectedSongs.map(song => (
                         <li className="user-splash-song"><span className="user-splash-song-name">{song.songName}</span> <br/><span className="orig-artist-splash">by {song.originalArtist}</span> </li>
                         ))}
