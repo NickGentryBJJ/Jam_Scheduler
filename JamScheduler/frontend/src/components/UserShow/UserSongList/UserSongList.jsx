@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import './UserSongList.css'
-import { fetchSongs } from "../../../store/songs";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import SongIndexItem from "../SongIndexItem/SongIndexItem";
 
 function UserSongList({user}) {
-    const dispatch = useDispatch();
  
     
     const songs = useSelector(state => state.songs)
