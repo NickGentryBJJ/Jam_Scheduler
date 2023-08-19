@@ -6,7 +6,7 @@ function SongIndexItem(song) {
         <div className="song-index-item">
             <h1 className="song-title">Title: {song.song.songName}</h1>
             <span className="song-artist">Artist: {song.song.originalArtist}</span>
-            <h2 className="desired-instrument">{song.song.user.stageName}'s choice of instrument is the {song.song.desiredInstrument}.</h2>
+            <h2 className="desired-instrument">{song.song.user.stageName}'s Preferred Part: {song.song.desiredInstrument}</h2>
         </div>
     )
 }

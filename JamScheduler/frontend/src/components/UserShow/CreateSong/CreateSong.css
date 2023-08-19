@@ -1,0 +1,4 @@
+.song-label-container {
+    display: flex;
+    flex-direction: column;
+}

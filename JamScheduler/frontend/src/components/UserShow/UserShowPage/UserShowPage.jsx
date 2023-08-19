@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { fetchUsers, updateUser } from '../../../store/users';
 import UserSongList from '../UserSongList/UserSongList';
 import { fetchSongs } from '../../../store/songs';
+import CreateSong from '../CreateSong/CreateSong';
 
 
 
@@ -120,6 +121,7 @@ const UserShowPage = () => {
             {/* {eeedit} */}
             {user ? 
             <div className="user-show-wrapper">
+                    <CreateSong/>
                     <ul className="user-show-container-po">
                         <li className='user-show-info-name'>{user.user.stageName}'s Song List</li>
                         <UserSongList user={user}/>
