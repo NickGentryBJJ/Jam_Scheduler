@@ -43,40 +43,49 @@ function SongIndexItem(song) {
         remix = (
             <div className="song-index-item">
                 <div className="wrapper-song">
-                    <div className="song-info">
-                        <form onSubmit={handleSubmit}>
-                            <div 
-                            className="song-title"
-                            contentEditable
-                            onInput={(e) => {
-                                setSongName(e.target.innerText)
-                            }}
-                            dangerouslySetInnerHTML={{ __html: song.song.songName }}
-                            />
-                            <div 
-                            className="song-artist"
-                            contentEditable
-                            onInput={(e) => {
-                                setOgArtist(e.target.innerText)
-                            }}
-                            dangerouslySetInnerHTML={{ __html: song.song.originalArtist }}
-                            />
-                            <div
-                            className="desired-instrument"
-                            contentEditable
-                            onInput={(e) => {
-                                setDesiredInstrument(e.target.innerText)
-                            }}
-                            dangerouslySetInnerHTML={{ __html: song.song.desiredInstrument }}
-                            />
-                            <div className="mod-menue">
-                                <button type="submit" className="edit-song-button">Save Song</button>
-                                <button onClick={()=>{setEditing(false)}} className="delete-song-button">Cancel</button>
+                        <form className="song-edit-form" onSubmit={handleSubmit}>
+                            <div className="edit-info-container">
+                                <h1 className="artist-span">
+                                    Title:
+                                </h1>
+                                <div
+                                className="edit-song-title"
+                                contentEditable
+                                onInput={(e) => {
+                                    setSongName(e.target.innerText)
+                                }}
+                                dangerouslySetInnerHTML={{ __html: song.song.songName }}
+                                />
+                                <h1 className="artist-span">
+                                    Artist:
+                                </h1>
+                                <div
+                                className="edit-song-artist"
+                                contentEditable
+                                onInput={(e) => {
+                                    setOgArtist(e.target.innerText)
+                                }}
+                                dangerouslySetInnerHTML={{ __html: song.song.originalArtist }}
+                                />
+                                <h1 className="artist-span">
+                                    Preferred Part:
+                                </h1>
+                                <div
+                                className="edit-desired-instrument"
+                                contentEditable
+                                onInput={(e) => {
+                                    setDesiredInstrument(e.target.innerText)
+                                }}
+                                dangerouslySetInnerHTML={{ __html: song.song.desiredInstrument }}
+                                />
                             </div>
+                                <div className="mod-menue">
+                                    <button type="submit" className="edit-song-button">Save Song</button>
+                                    <button onClick={()=>{setEditing(false)}} className="delete-song-button">Cancel</button>
+                                </div>
                         </form>
                     </div>
                 </div>
-            </div>
         )
     } else if (song.song.userId === sessionUser.id && editing !== true) {
         remix = (

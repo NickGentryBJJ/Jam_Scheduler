@@ -22,13 +22,7 @@
     margin-left: 26%;
 }
 
-.song-title {
-    color: azure;
-    padding-bottom: 5px;
-    font-weight: 500;
-    font-size: larger;
 
-}
 
 
 .artist-span{
@@ -42,6 +36,13 @@
     font-size: larger;
 }
 
+.song-title {
+    color: azure;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: larger;
+}
+
 .song-artist {
     color: azure;
     padding-bottom: 5px;
@@ -51,6 +52,26 @@
 .desired-instrument {
     color: azure;
     padding-bottom: 5px;
+}
+
+.edit-song-title {
+    color: azure;
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-size: larger;
+    padding: 3px;
+}
+.edit-song-artist {
+    color: azure;
+    margin-bottom: 7px;
+    padding: 3px;
+}
+
+
+.edit-desired-instrument {
+    color: azure;
+    margin-bottom: 7px;
+    padding: 3px;
 }
 
 .mod-button {
@@ -84,4 +105,14 @@
 .edit-song-button:hover {
     background: linear-gradient(45deg, rgb(231, 0, 185), transparent);
     color: #07b0f9;
+}
+
+.song-edit-form {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.edit-info-container {
+    margin-right: 15%;
 }
