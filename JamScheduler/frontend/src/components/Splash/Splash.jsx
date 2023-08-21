@@ -21,9 +21,9 @@ function Splash() {
 
     return (
         <div className="splash-wrapper">
-            <UserSplashCard/>
             <EventIndex/>
-            <AboutJamTime/>
+            <UserSplashCard/>
+            {/* <AboutJamTime/> */}
         </div>
     )
 }

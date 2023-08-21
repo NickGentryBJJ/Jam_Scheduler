@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import SongIndexItem from "../SongIndexItem/SongIndexItem";
 import './MutualSongList.css'
+import MutualSongIndexItem from "../MutualSongIndexItem/MutualSongIndexItem";
 
 function MutualSongList({user}) {
     const sessionUser = useSelector(state => state.session.user);
@@ -36,7 +37,7 @@ function MutualSongList({user}) {
             for (let j = 0; j < songList2.length; j++) {
                 const song2 = songList2[j];
                 if (song1.songName.toLowerCase() === song2.songName.toLowerCase()) {
-                    mutualSongs.push(song2)
+                    mutualSongs.push([song1, song2])
                 }
             }
         }
@@ -54,7 +55,7 @@ function MutualSongList({user}) {
             <ul className="user-song-list-wrapper">
                 {mutualSongs.reverse().map(song => (
                     <li className="user-song">
-                        <SongIndexItem song={song}/>
+                        <MutualSongIndexItem song={song[0]} userSong={song[1]}/>
                     </li>
                 ))}
             </ul>

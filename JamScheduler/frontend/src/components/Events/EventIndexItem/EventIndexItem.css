@@ -34,7 +34,7 @@
 }
 
 .event-page-button {
-    background: linear-gradient(45deg, black, transparent);
+    background: linear-gradient(45deg, black, #110060);
     color: white;
     border-radius: 15px;
     border-style: none;
@@ -49,8 +49,8 @@
 
 .event-page-button:hover {
     cursor: pointer;
-    background: linear-gradient(45deg, #ffe700, transparent);
-    color: crimson;
+    background: linear-gradient(45deg, crimson, black);
+    color: white;
     border: black;
     border-style: groove;
 }

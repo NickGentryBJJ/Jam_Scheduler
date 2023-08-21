@@ -11,14 +11,27 @@
 .wrapper-song {
     width: 100%;
     display: flex;
+    justify-content: flex-start;
+}
+.wrapper-song-user {
+    width: 100%;
+    display: flex;
     justify-content: inherit;
+}
+.song-info-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 26%;
 }
 .song-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin-left: 26%;
+    min-width: 100%;
+    margin-left: 50%;
 }
 .artist-span{
     color: black;

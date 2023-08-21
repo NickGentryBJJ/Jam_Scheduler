@@ -30,7 +30,7 @@ const UserShowPage = () => {
         starFox = (
             <>
             <div className="user-show-wrapper">
-                <div className="user-show-container">
+                <div className="user-songs-container">
                     <UserSongList user={user}/>
                 </div>
                 <div className='mutual-songs-container'>

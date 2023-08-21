@@ -96,8 +96,8 @@ function SongIndexItem(song) {
     } else if (song.song.userId === sessionUser.id && editing !== true) {
         remix = (
         <div className="song-index-item">
-            <div className="wrapper-song">
-                <div className="song-info">
+            <div className="wrapper-song-user">
+                <div className="song-info-user">
                     <h1 className="song-title">
                         {song.song.songName}
                     </h1>
@@ -122,9 +122,21 @@ function SongIndexItem(song) {
     } else if(song.song.userId !== sessionUser.id) {
         remix = (
         <div className="song-index-item">
-            <h1 className="song-title">{song.song.songName}</h1>
-            <span className="song-artist"><span className="artist-span">Artist:</span> {song.song.originalArtist}</span>
-            <h2 className="desired-instrument"><span className="inst-span">{song.song.user.stageName}'s Preferred Part:</span> {song.song.desiredInstrument}</h2>
+            <div className="song-info">
+                <h1 className="song-title">
+                    {song.song.songName}
+                </h1>
+                <span className="song-artist">
+                    <span className="artist-span">
+                        Artist:
+                    </span> {song.song.originalArtist}
+                </span>
+                <h2 className="desired-instrument">
+                    <span className="inst-span">
+                        {song.song.user.stageName}'s Preferred Part:
+                    </span> {song.song.desiredInstrument}
+                </h2>
+            </div>
         </div>
         )
     }

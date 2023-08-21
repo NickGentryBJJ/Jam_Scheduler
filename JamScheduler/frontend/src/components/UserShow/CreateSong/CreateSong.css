@@ -4,7 +4,7 @@
 }
 
 .create-song-container {
-    background: linear-gradient(45deg, rgb(255, 0, 0), transparent);
+    background: linear-gradient(45deg, rgb(255, 0, 0), black);
     height: min-content;
     padding: 20px;
     border-radius: 35px;
@@ -21,6 +21,7 @@
     border-bottom-style: groove;
     border-bottom-width: 3px;
     border-bottom-color: black;
+    color: rgb(247, 187, 255);
 }
 
 .create-song-name-text, .create-song-og-artist-text, .create-song-instrument-text {
@@ -41,7 +42,7 @@
     font-weight: 500;
     cursor: pointer;
     display: flex;
-    background: linear-gradient(45deg, #ff4c20, orange);
+    background: linear-gradient(45deg, black, #110060);
     border-radius: 38px;
     flex-direction: column;
     align-items: center;
@@ -54,4 +55,5 @@
 
 .create-label-song {
     margin-bottom: 5px;
+    color: rgb(247, 187, 255);
 }
