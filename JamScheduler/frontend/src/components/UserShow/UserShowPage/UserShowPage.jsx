@@ -7,6 +7,7 @@ import UserSongList from '../UserSongList/UserSongList';
 import { fetchSongs } from '../../../store/songs';
 import CreateSong from '../CreateSong/CreateSong';
 import UpcomingEvents from '../UpcomingEvents/UpcomingEvents';
+import MutualSongList from '../MutualSongList/MutualSongList';
 
 
 
@@ -32,7 +33,9 @@ const UserShowPage = () => {
                 <div className="user-show-container">
                     <UserSongList user={user}/>
                 </div>
-                <UpcomingEvents user={user}/>
+                <div className='mutual-songs-container'>
+                    <MutualSongList user={user}/>
+                </div>
             </div>
             </>
             )

@@ -101,6 +101,77 @@ song1 = Song.create!(
   song_name: 'I Like It',
   desired_instrument: 'Guitar',
 )
+
+song12 = Song.create!(
+  user_id: 1,
+  original_artist: 'Michael Jackson',
+  song_name: 'Thriller',
+  desired_instrument: 'Piano',
+)
+
+song13 = Song.create!(
+  user_id: 1,
+  original_artist: 'The Rolling Stones',
+  song_name: 'Paint It Black',
+  desired_instrument: 'Drums',
+)
+
+song14 = Song.create!(
+  user_id: 1,
+  original_artist: 'David Bowie',
+  song_name: 'Space Oddity',
+  desired_instrument: 'Guitar',
+)
+
+song15 = Song.create!(
+  user_id: 1,
+  original_artist: 'Elvis Presley',
+  song_name: "Can't Help Falling in Love",
+  desired_instrument: 'Vocals',
+)
+
+song16 = Song.create!(
+  user_id: 1,
+  original_artist: 'The Eagles',
+  song_name: 'Hotel California',
+  desired_instrument: 'Electric Guitar',
+)
+
+song17 = Song.create!(
+  user_id: 1,
+  original_artist: 'Bob Marley',
+  song_name: 'Three Little Birds',
+  desired_instrument: 'Acoustic Guitar',
+)
+
+song18 = Song.create!(
+  user_id: 1,
+  original_artist: 'Stevie Wonder',
+  song_name: 'Superstition',
+  desired_instrument: 'Keyboards',
+)
+
+song19 = Song.create!(
+  user_id: 1,
+  original_artist: 'Prince',
+  song_name: 'When Doves Cry',
+  desired_instrument: 'Synthesizer',
+)
+
+song20 = Song.create!(
+  user_id: 1,
+  original_artist: 'Adele',
+  song_name: 'Rolling in the Deep',
+  desired_instrument: 'Bass Guitar',
+)
+
+song21 = Song.create!(
+  user_id: 1,
+  original_artist: 'Queen',
+  song_name: 'Bohemian Rhapsody',
+  desired_instrument: 'Vocals',
+)
+
 puts "Songs Created!"
 puts "Creating Events Now!"
 
