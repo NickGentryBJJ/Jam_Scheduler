@@ -45,39 +45,45 @@ function SongIndexItem(song) {
                 <div className="wrapper-song">
                         <form className="song-edit-form" onSubmit={handleSubmit}>
                             <div className="edit-info-container">
-                                <h1 className="artist-span">
-                                    Title:
-                                </h1>
-                                <div
-                                className="edit-song-title"
-                                contentEditable
-                                onInput={(e) => {
-                                    setSongName(e.target.innerText)
-                                }}
-                                dangerouslySetInnerHTML={{ __html: song.song.songName }}
-                                />
-                                <h1 className="artist-span">
-                                    Artist:
-                                </h1>
-                                <div
-                                className="edit-song-artist"
-                                contentEditable
-                                onInput={(e) => {
-                                    setOgArtist(e.target.innerText)
-                                }}
-                                dangerouslySetInnerHTML={{ __html: song.song.originalArtist }}
-                                />
-                                <h1 className="artist-span">
-                                    Preferred Part:
-                                </h1>
-                                <div
-                                className="edit-desired-instrument"
-                                contentEditable
-                                onInput={(e) => {
-                                    setDesiredInstrument(e.target.innerText)
-                                }}
-                                dangerouslySetInnerHTML={{ __html: song.song.desiredInstrument }}
-                                />
+                                <div className="song-edit-info-container">
+                                    <span className="artist-span">
+                                        Title:
+                                    </span>
+                                    <div
+                                    className="edit-song-title"
+                                    contentEditable
+                                    onInput={(e) => {
+                                        setSongName(e.target.innerText)
+                                    }}
+                                    dangerouslySetInnerHTML={{ __html: song.song.songName }}
+                                    />
+                                </div>    
+                                <div className="song-edit-info-container">
+                                    <h1 className="artist-span">
+                                        Artist:
+                                    </h1>
+                                    <div
+                                    className="edit-song-artist"
+                                    contentEditable
+                                    onInput={(e) => {
+                                        setOgArtist(e.target.innerText)
+                                    }}
+                                    dangerouslySetInnerHTML={{ __html: song.song.originalArtist }}
+                                    />
+                                </div>
+                                <div className="song-edit-info-container">
+                                    <h1 className="artist-span">
+                                        Preferred Part:
+                                    </h1>
+                                    <div
+                                    className="edit-desired-instrument"
+                                    contentEditable
+                                    onInput={(e) => {
+                                        setDesiredInstrument(e.target.innerText)
+                                    }}
+                                    dangerouslySetInnerHTML={{ __html: song.song.desiredInstrument }}
+                                    />
+                                </div>
                             </div>
                                 <div className="mod-menue">
                                     <button type="submit" className="edit-song-button">Save Song</button>

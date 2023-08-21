@@ -57,7 +57,7 @@ export default function CreateSong() {
                             Artist
                         </h3>
                         <textarea
-                            placeholder='El Debarge'
+                            placeholder='Debarge'
                             className='create-song-og-artist-text'
                             type='textarea'
                             value={originalArtist}
