@@ -14,4 +14,6 @@
 class Event < ApplicationRecord
     validates :title, :location, :details, :date, presence: true
     belongs_to :user
+    has_many :attendees, 
+    dependent: :destroy
 end

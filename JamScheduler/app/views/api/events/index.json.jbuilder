@@ -4,6 +4,5 @@
         json.set! 'user' do 
             json.extract! event.user, :stage_name, :id, :email
         end
-    
     end
 end
