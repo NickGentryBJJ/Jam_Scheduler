@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../../../../store/users';
+import AttendeeListItem from '../AttendeeListItem/AttendeeListItem';
  
 
 function EventAttendeeList({ eventAttendees }) {
@@ -15,14 +16,12 @@ function EventAttendeeList({ eventAttendees }) {
     const users = useSelector(state => state.users);
 
     return (
-        <div>
+        <div className='attendee-list-wrapper'>
             {eventAttendees.map((attendee, index) => {
             const user = users[attendee.userId]
             if (user) {
             return (
-                <div key={index}>
-                    {user.stageName}
-                </div>
+                <AttendeeListItem attendee={attendee} user={user} index={index}/>
             );
             } else {
             return null; 

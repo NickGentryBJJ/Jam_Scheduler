@@ -1,10 +1,15 @@
 import React from "react";
+import './AttendeeListItem.css'
 
-const AttendeeListItem = ({attendee}) => {
+const AttendeeListItem = ({attendee, user, index}) => {
     return (
-        <div>
-            Hello From List Item 
+        <div className="attendee-list-item-wrapper">
+            <ul key={index}>
+                <li>{user.stageName}</li>
+                <li>{attendee.status}</li>
+            </ul>
         </div>
+    
     )
 }
 
