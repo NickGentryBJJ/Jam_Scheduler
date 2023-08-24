@@ -191,6 +191,21 @@ event2 = Event.create!(
 )
 
 puts "Events Finished! Exciting!"
+puts "Adding Attendees Fingers Crossed!"
+puts "mothafucka!"
+
+parti1 = Attendee.create!(
+  user_id: 1,
+  event_id: 1, 
+  status: "Going"
+)
+parti2 = Attendee.create!(
+  user_id: 2,
+  event_id: 2, 
+  status: "Maybe"
+)
+
+
 puts "All Seeds Created No Issues!" 
 
 

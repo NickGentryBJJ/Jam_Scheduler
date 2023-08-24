@@ -10,4 +10,6 @@
 #  event_id   :bigint
 #
 class Attendee < ApplicationRecord
+    validates :status, :user_id, :event_id, presence: true
+    belongs_to :event
 end
