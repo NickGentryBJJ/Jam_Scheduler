@@ -5,8 +5,8 @@ const AttendeeListItem = ({attendee, user, index}) => {
     return (
         <div className="attendee-list-item-wrapper">
             <ul key={index}>
-                <li>{user.stageName}</li>
-                <li>{attendee.status}</li>
+                <li>Attendee Stage Name: {user.stageName}</li>
+                <li>RSVP Status: {attendee.status}</li>
             </ul>
         </div>
     

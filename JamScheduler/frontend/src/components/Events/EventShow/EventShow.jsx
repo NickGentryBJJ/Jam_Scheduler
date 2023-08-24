@@ -25,7 +25,6 @@ function EventShow() {
         {event ? 
             <div className="event-show-wrapper">
                 <EventShowItem event={event}/>
-                <EventAttendeeList eventAttendees={event.attendees}/>
             </div>
         : null}
         </>

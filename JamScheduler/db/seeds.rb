@@ -204,6 +204,16 @@ parti2 = Attendee.create!(
   event_id: 2, 
   status: "Maybe"
 )
+parti3 = Attendee.create!(
+  user_id: 1,
+  event_id: 2, 
+  status: "Going"
+)
+parti4 = Attendee.create!(
+  user_id: 2,
+  event_id: 1, 
+  status: "Maybe"
+)
 
 
 puts "All Seeds Created No Issues!" 

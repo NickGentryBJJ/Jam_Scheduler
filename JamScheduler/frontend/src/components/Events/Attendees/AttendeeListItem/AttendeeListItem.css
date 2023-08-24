@@ -1,3 +1,10 @@
 .attendee-list-item-wrapper {
     background: red;
+    display: flex;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
 }
