@@ -25,7 +25,6 @@ const storeCSRFToken = response => {
   }
   
   export const storeCurrentUser = user => {
-    console.log(user)
     if (user) sessionStorage.setItem("currentUser", JSON.stringify(user));
     else sessionStorage.removeItem("currentUser");
   }

@@ -4,7 +4,6 @@ import { getUser } from '../../../../store/users';
  
 
 function EventAttendeeList({ eventAttendees }) {
-    debugger
     const dispatch = useDispatch();
 
     useEffect(() => {
