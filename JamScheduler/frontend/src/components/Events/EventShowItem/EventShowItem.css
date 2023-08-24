@@ -12,10 +12,7 @@
     border-radius: 38px;
     flex-direction: column;
 }
-.show-guests {
-    margin-left: 4%;
-    margin-right: 4%;
-}
+
 
 .house{
     width: 100%;
@@ -23,8 +20,20 @@
     flex-direction: column;
     align-items: center;
 }
-.back-to-index-button, .show-guests, .event-comment-button {
+.back-to-index-button, .show-guests, .event-comment-button, .RSVP-button {
     background: linear-gradient(45deg, black, transparent);
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    height: 30px;
+    padding: 3px;
+    width: 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 15px;
+    margin-bottom: 2vh;
+    margin-left: 4%;
+    background: linear-gradient(45deg, black, #110060);
     color: white;
     border-radius: 15px;
     border-style: none;
@@ -37,10 +46,10 @@
     margin-bottom: 2vh;
 }
 
-.back-to-index-button:hover, .show-guests:hover, .event-comment-button:hover {
+.back-to-index-button:hover, .show-guests:hover, .event-comment-button:hover, .RSVP-button:hover {
     cursor: pointer;
-    background: linear-gradient(45deg, #ffe700, transparent);
-    color: crimson;
+    background: linear-gradient(45deg, crimson, black);
+    color: white;
     border: black;
     border-style: groove;
 }

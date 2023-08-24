@@ -48,6 +48,7 @@ function EventShowItem({event}) {
                             <button onClick={backToIndex} className="back-to-index-button">Back To All Events</button>
                             <button onClick={handleClick} className="show-guests">Show Guests</button>
                             <button className="event-comment-button">Add Comment</button>
+                            <button className="RSVP-button">RSVP</button>
                         </div>
                     </div>
                 </div>
