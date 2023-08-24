@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { RECEIVE_EVENT } from "./events";
 
 export const RECEIVE_ATTENDEE = 'attendees/RECEIVE_ATTENDEE';
 export const RECEIVE_ATTENDEES = 'attendees/RECEIVE_ATTENDEES';
@@ -37,6 +38,7 @@ export const fetchAttendees = () => async (dispatch) => {
 };
 
 export const fetchAttendee = attendeeId => async (dispatch) => {
+    
     const response = await fetch (`/api/attendees/${attendeeId}`);
 
     if (response.ok) {
