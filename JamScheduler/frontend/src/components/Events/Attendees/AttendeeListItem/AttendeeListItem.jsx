@@ -25,7 +25,6 @@ const AttendeeListItem = ({attendee, user, index}) => {
     }
 
     const handleEdit = (e) => {
-        debugger
         e.preventDefault();
         const formData = new FormData();
         formData.append('attendee[status]', status);

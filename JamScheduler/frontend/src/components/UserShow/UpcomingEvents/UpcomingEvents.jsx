@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchAttendees } from "../../../store/attendees";
 
 function UpcomingEvents(user) {
-    debugger
     
     const dispatch = useDispatch();
     useEffect(() => {
@@ -14,7 +13,7 @@ function UpcomingEvents(user) {
         let userEvents = []
         for (let i = 0; i < attendees.length; i++) {
             const attendee = attendees[i];
-            if (attendee.userId === user.user.user.id) {
+            if (attendee.userId === user.user.user.id && attendee.status === "Going") {
                 userEvents.push(attendee.event);
             }
         }
@@ -22,8 +21,12 @@ function UpcomingEvents(user) {
 
     return (
         <div className="upcoming-events-wrapper">
+            <h1>Your Upcoming Events</h1>
             {userEvents.map(event=>(
-                <div>{event.title}</div>
+                <>
+                    <div>{event.title}</div>
+                    <div>{event.date}</div>
+                </>
             ))}
         </div>
     )
