@@ -82,24 +82,25 @@ export const deleteAttendee = attendeeId => async (dispatch) => {
 };
 
 
+const attendeesReducer = (state = [], action) => {
+    Object.freeze(state);
 
-
-const attendeesReducer = (state = {}, action) => {
-    Object.freeze(state)
-
-    const nextState = Object.assign({}, state)
+    const nextState = [...state];
 
     switch (action.type) {
         case RECEIVE_ATTENDEES:
-            return {...action.attendees};
+            const attendeesArray = Object.values(action.attendees);
+            return [...attendeesArray];        
         case RECEIVE_ATTENDEE:
-            return {...state, [action.attendee.id]: action.attendee };
+            nextState.push(action.attendee); 
+            return nextState;
         case REMOVE_ATTENDEE:
             delete nextState[action.attendeeId];
             return nextState;
         default:
             return nextState;
     }
-}
+};
+
 
 export default attendeesReducer;

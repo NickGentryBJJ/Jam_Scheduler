@@ -14,7 +14,6 @@ function EventAttendeeList({ eventAttendees }) {
         dispatch(fetchUser(attendee.userId));
         });
     }, [eventAttendees, dispatch]);
-    debugger
     return (
         <div className='attendee-list-wrapper'>
                 <h1 className='list-head'>Attendee List</h1>

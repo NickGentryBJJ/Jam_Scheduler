@@ -8,6 +8,7 @@ import { fetchSongs } from "../../store/songs";
 import { fetchEvents } from "../../store/events";
 import { fetchUsers } from "../../store/users";
 import AboutJamTime from "./AboutJamTime/AboutJameTime";
+import { fetchAttendees } from "../../store/attendees";
 
 function Splash() {
     const sessionUser = useSelector(state => state.session.user);
@@ -16,6 +17,7 @@ function Splash() {
         dispatch(fetchEvents())
         dispatch(fetchUsers())
         dispatch(fetchSongs())
+        dispatch(fetchAttendees())
     }, [dispatch])
     if (!sessionUser) return <Redirect to='/login'/>
 
