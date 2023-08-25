@@ -34,7 +34,75 @@ nick = User.create!(
   password: 'password'
   
 )
+# Seed 1
+User.create!(
+  stage_name: 'Alice',
+  email: 'alice@email.com',
+  password: 'securepassword1'
+)
 
+# Seed 2
+User.create!(
+  stage_name: 'Bob',
+  email: 'bob@email.com',
+  password: 'secretpass123'
+)
+
+# Seed 3
+User.create!(
+  stage_name: 'Eve',
+  email: 'eve@email.com',
+  password: 'mypassword456'
+)
+
+# Seed 4
+User.create!(
+  stage_name: 'Charlie',
+  email: 'charlie@email.com',
+  password: 'password789'
+)
+
+# Seed 5
+User.create!(
+  stage_name: 'Grace',
+  email: 'grace@email.com',
+  password: 'strongpass!23'
+)
+
+# Seed 6
+User.create!(
+  stage_name: 'David',
+  email: 'david@email.com',
+  password: 'davids_secret'
+)
+
+# Seed 7
+User.create!(
+  stage_name: 'Olivia',
+  email: 'olivia@email.com',
+  password: 'oliviasecure'
+)
+
+# Seed 8
+User.create!(
+  stage_name: 'Liam',
+  email: 'liam@email.com',
+  password: 'liamspassword'
+)
+
+# Seed 9
+User.create!(
+  stage_name: 'Sophia',
+  email: 'sophia@email.com',
+  password: 'sophiapass42'
+)
+
+# Seed 10
+User.create!(
+  stage_name: 'Jackson',
+  email: 'jackson@email.com',
+  password: 'jackson12345'
+)
 puts "Users Created MothaFucka"
 puts "Makin dem songs now bitch"
 
@@ -172,6 +240,248 @@ song21 = Song.create!(
   desired_instrument: 'Vocals',
 )
 
+# Seed 1
+Song.create!(
+  user_id: 3,
+  original_artist: 'Led Zeppelin',
+  song_name: 'Stairway to Heaven',
+  desired_instrument: 'Guitar',
+)
+
+# Seed 2
+Song.create!(
+  user_id: 3,
+  original_artist: 'Queen',
+  song_name: 'Bohemian Rhapsody',
+  desired_instrument: 'Piano',
+)
+
+# Seed 3
+Song.create!(
+  user_id: 3,
+  original_artist: 'Michael Jackson',
+  song_name: 'Billie Jean',
+  desired_instrument: 'Bass',
+)
+
+# Seed 4
+Song.create!(
+  user_id: 3,
+  original_artist: 'Elton John',
+  song_name: 'Rocket Man',
+  desired_instrument: 'Keyboard',
+)
+
+# Seed 5
+Song.create!(
+  user_id: 3,
+  original_artist: 'Adele',
+  song_name: 'Someone Like You',
+  desired_instrument: 'Vocals',
+)
+# Seed 1
+Song.create!(
+  user_id: 4,
+  original_artist: 'Led Zeppelin',
+  song_name: 'Black Dog',
+  desired_instrument: 'Guitar',
+)
+
+# Seed 2
+Song.create!(
+  user_id: 4,
+  original_artist: 'Queen',
+  song_name: 'Radio Ga Ga',
+  desired_instrument: 'Piano',
+)
+
+# Seed 3
+Song.create!(
+  user_id: 4,
+  original_artist: 'Michael Jackson',
+  song_name: 'Smooth Criminal',
+  desired_instrument: 'Bass',
+)
+
+# Seed 4
+Song.create!(
+  user_id: 4,
+  original_artist: 'Elton John',
+  song_name: 'Tiny Dancer',
+  desired_instrument: 'Keyboard',
+)
+
+# Seed 5
+Song.create!(
+  user_id: 4,
+  original_artist: 'Adele',
+  song_name: 'Rolling in the Deep',
+  desired_instrument: 'Vocals',
+)
+Song.create!(
+  user_id: 5,
+  original_artist: 'Adele',
+  song_name: 'Someone Like You',
+  desired_instrument: 'Vocals',
+)
+# Seed 1
+Song.create!(
+  user_id: 5,
+  original_artist: 'Led Zeppelin',
+  song_name: 'Black Dog',
+  desired_instrument: 'Guitar',
+)
+
+# Seed 2
+Song.create!(
+  user_id: 5,
+  original_artist: 'Queen',
+  song_name: 'Radio Ga Ga',
+  desired_instrument: 'Piano',
+)
+
+# Seed 3
+Song.create!(
+  user_id: 5,
+  original_artist: 'Michael Jackson',
+  song_name: 'Smooth Criminal',
+  desired_instrument: 'Bass',
+)
+
+# Seed 5
+Song.create!(
+  user_id: 5,
+  original_artist: 'Elton John',
+  song_name: 'Tiny Dancer',
+  desired_instrument: 'Keyboard',
+)
+
+# Seed 5
+Song.create!(
+  user_id: 5,
+  original_artist: 'Adele',
+  song_name: 'Rolling in the Deep',
+  desired_instrument: 'Vocals',
+)
+
+# Seed 1
+Song.create!(
+  user_id: 6,
+  original_artist: 'Pink Floyd',
+  song_name: 'Comfortably Numb',
+  desired_instrument: 'Guitar',
+)
+
+# Seed 2
+Song.create!(
+  user_id: 6,
+  original_artist: 'The Rolling Stones',
+  song_name: 'Paint It Black',
+  desired_instrument: 'Drums',
+)
+
+# Seed 3
+Song.create!(
+  user_id: 6,
+  original_artist: 'Fleetwood Mac',
+  song_name: 'Go Your Own Way',
+  desired_instrument: 'Bass',
+)
+
+# Seed 4
+Song.create!(
+  user_id: 6,
+  original_artist: 'David Bowie',
+  song_name: 'Space Oddity',
+  desired_instrument: 'Keyboard',
+)
+
+# Seed 5
+Song.create!(
+  user_id: 6,
+  original_artist: 'Nirvana',
+  song_name: 'Smells Like Teen Spirit',
+  desired_instrument: 'Vocals',
+)
+
+# Seed 1
+Song.create!(
+  user_id: 7,
+  original_artist: 'Coldplay',
+  song_name: 'Fix You',
+  desired_instrument: 'Piano',
+)
+
+# Seed 2
+Song.create!(
+  user_id: 7,
+  original_artist: 'Ed Sheeran',
+  song_name: 'Shape of You',
+  desired_instrument: 'Guitar',
+)
+
+# Seed 3
+Song.create!(
+  user_id: 7,
+  original_artist: 'Billie Eilish',
+  song_name: 'Bad Guy',
+  desired_instrument: 'Bass',
+)
+
+# Seed 4
+Song.create!(
+  user_id: 7,
+  original_artist: 'Taylor Swift',
+  song_name: 'Love Story',
+  desired_instrument: 'Vocals',
+)
+
+# Seed 5
+Song.create!(
+  user_id: 7,
+  original_artist: 'Imagine Dragons',
+  song_name: 'Believer',
+  desired_instrument: 'Guitar'
+)
+Song.create!(
+  user_id: 8,
+  original_artist: 'Coldplay',
+  song_name: 'Fix You',
+  desired_instrument: 'Piano',
+)
+
+# Seed 2
+Song.create!(
+  user_id: 8,
+  original_artist: 'Ed Sheeran',
+  song_name: 'Shape of You',
+  desired_instrument: 'Guitar',
+)
+
+# Seed 3
+Song.create!(
+  user_id: 8,
+  original_artist: 'Billie Eilish',
+  song_name: 'Bad Guy',
+  desired_instrument: 'Bass',
+)
+
+# Seed 4
+Song.create!(
+  user_id: 8,
+  original_artist: 'Taylor Swift',
+  song_name: 'Love Story',
+  desired_instrument: 'Vocals',
+)
+
+# Seed 5
+Song.create!(
+  user_id: 8,
+  original_artist: 'Imagine Dragons',
+  song_name: 'Believer',
+  desired_instrument: 'Guitar'
+)
+
 puts "Songs Created!"
 puts "Creating Events Now!"
 
@@ -190,30 +500,150 @@ event2 = Event.create!(
   date: "2023-09-10"
 )
 
+# Seed 2
+Event.create!(
+  user_id: 2,
+  title: "Alice's Art Exhibition",
+  location: 'Gallery XYZ',
+  details: "Join Alice's art exhibition showcasing her latest creations.",
+  date: "2023-08-25"
+)
+
+# Seed 3
+Event.create!(
+  user_id: 3,
+  title: "Bob's Birthday Bash",
+  location: "Bob's House",
+  details: "Let's celebrate Bob's birthday with a night of fun and games.",
+  date: "2023-10-03"
+)
+
+# Seed 4
+Event.create!(
+  user_id: 4,
+  title: "Eve's Book Club",
+  location: 'Local Library',
+  details: "Discussing this month's book pick. All book lovers welcome!",
+  date: "2023-09-18"
+)
+
+# Seed 5
+Event.create!(
+  user_id: 5,
+  title: "Charlie's Charity 5K Run",
+  location: 'City Park',
+  details: "Join Charlie's charity run to support a good cause.",
+  date: "2023-08-29"
+)
+
+# Seed 6
+Event.create!(
+  user_id: 6,
+  title: "Grace's Yoga Retreat",
+  location: 'Serene Retreat Center',
+  details: "Relax, rejuvenate, and find your inner peace with Grace's yoga retreat.",
+  date: "2023-09-15"
+)
+
+# Seed 7
+Event.create!(
+  user_id: 7,
+  title: "David's Coding Workshop",
+  location: 'Tech Hub',
+  details: "Learn coding basics and build your own website with David's workshop.",
+  date: "2023-10-12"
+)
+
+# Seed 8
+Event.create!(
+  user_id: 8,
+  title: 'Olivia Live in Concert',
+  location: 'City Arena',
+  details: "Experience Olivia's mesmerizing performance live on stage.",
+  date: "2023-09-27"
+)
+
 puts "Events Finished! Exciting!"
 puts "Adding Attendees Fingers Crossed!"
 puts "mothafucka!"
 
-parti1 = Attendee.create!(
-  user_id: 1,
-  event_id: 1, 
-  status: "Going"
-)
-parti2 = Attendee.create!(
+# Attendees for Event 1
+Attendee.create!(
   user_id: 2,
-  event_id: 2, 
+  event_id: 1,
   status: "Maybe"
 )
-parti3 = Attendee.create!(
-  user_id: 1,
-  event_id: 2, 
+
+Attendee.create!(
+  user_id: 3,
+  event_id: 1,
   status: "Going"
 )
-parti4 = Attendee.create!(
-  user_id: 2,
-  event_id: 1, 
+
+Attendee.create!(
+  user_id: 4,
+  event_id: 1,
+  status: "Going"
+)
+
+# Attendees for Event 2
+Attendee.create!(
+  user_id: 1,
+  event_id: 2,
+  status: "Going"
+)
+
+Attendee.create!(
+  user_id: 3,
+  event_id: 2,
   status: "Maybe"
 )
+
+Attendee.create!(
+  user_id: 4,
+  event_id: 2,
+  status: "Going"
+)
+
+# Continue the pattern for the rest of the events and users...
+
+# Attendees for Event 12
+Attendee.create!(
+  user_id: 5,
+  event_id: 8,
+  status: "Going"
+)
+
+Attendee.create!(
+  user_id: 1,
+  event_id: 7,
+  status: "Maybe"
+)
+
+Attendee.create!(
+  user_id: 2,
+  event_id: 6,
+  status: "Going"
+)
+
+users = User.all
+events = Event.where(id: 3..8)  # Events 3 through 11
+statuses = ["Going", "Maybe"]
+
+users.each do |user|
+  events.each do |event|
+    Attendee.create!(
+      user_id: user.id,
+      event_id: event.id,
+      status: statuses.sample
+    )
+  end
+end
+
+
+
+
+
 
 
 puts "All Seeds Created No Issues!" 
