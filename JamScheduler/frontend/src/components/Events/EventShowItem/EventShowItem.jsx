@@ -10,6 +10,8 @@ function EventShowItem({event}) {
     const [comments, setComments] = useState(false)
     const [rsvp, setRsvp] = useState(false)
     const history = useHistory();
+    debugger
+    const eventAttendees = event.attendees
 
     function backToIndex() {
         history.push('/')
@@ -20,8 +22,24 @@ function EventShowItem({event}) {
             setParti(true);
             setComments(false);
             setRsvp(false)
+            const gButton = document.querySelector('.show-guests')
+                gButton.style.background = 'linear-gradient(45deg, green, black)';
+                gButton.style.color = 'white';
+                gButton.style.border = '1px solid black';
+            const cButton = document.querySelector('.event-comment-button')
+                cButton.style.background = '';
+                cButton.style.color = '';
+                cButton.style.border = '';
+            const rButton = document.querySelector('.RSVP-button')
+                rButton.style.background = '';
+                rButton.style.color = '';
+                rButton.style.border = '';
         } else {
             setParti(false)
+            const gButton = document.querySelector('.show-guests')
+                gButton.style.background = '';
+                gButton.style.color = '';
+                gButton.style.border = '';
         }
     }
     const handleComment = () => {
@@ -29,7 +47,23 @@ function EventShowItem({event}) {
             setComments(true);
             setParti(false);
             setRsvp(false)
+            const cButton = document.querySelector('.event-comment-button')
+                cButton.style.background = 'linear-gradient(45deg, green, black)';
+                cButton.style.color = 'white';
+                cButton.style.border = '1px solid black';
+            const gButton = document.querySelector('.show-guests')
+                gButton.style.background = '';
+                gButton.style.color = '';
+                gButton.style.border = '';
+            const rButton = document.querySelector('.RSVP-button')
+                rButton.style.background = '';
+                rButton.style.color = '';
+                rButton.style.border = '';
         } else {
+            const cButton = document.querySelector('.event-comment-button')
+                cButton.style.background = '';
+                cButton.style.color = '';
+                cButton.style.border = '';
             setComments(false)
         }
     }
@@ -38,8 +72,24 @@ function EventShowItem({event}) {
             setRsvp(true)
             setParti(false);
             setComments(false);
+            const rButton = document.querySelector('.RSVP-button')
+                rButton.style.background = 'linear-gradient(45deg, green, black)';
+                rButton.style.color = 'white';
+                rButton.style.border = '1px solid black';
+            const gButton = document.querySelector('.show-guests')
+                gButton.style.background = '';
+                gButton.style.color = '';
+                gButton.style.border = '';
+            const cButton = document.querySelector('.event-comment-button')
+                cButton.style.background = '';
+                cButton.style.color = '';
+                cButton.style.border = '';
         } else {
             setRsvp(false)
+            const rButton = document.querySelector('.RSVP-button')
+                rButton.style.background = '';
+                rButton.style.color = '';
+                rButton.style.border = '';
         }
     }
     let ness;
@@ -47,7 +97,7 @@ function EventShowItem({event}) {
     if (parti) {
         ness = (
             <div>
-                <EventAttendeeList eventAttendees={event.attendees}/>
+                <EventAttendeeList eventAttendees={eventAttendees}/>
             </div>
         )
     } else if (rsvp) {

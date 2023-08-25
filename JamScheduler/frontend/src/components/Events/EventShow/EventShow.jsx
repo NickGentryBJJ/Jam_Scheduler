@@ -14,6 +14,7 @@ function EventShow() {
 
     useEffect(() => {
         dispatch(fetchEvents())
+        dispatch(fetchAttendees())
     }, [dispatch])
 
     const events = useSelector(state => state.events);

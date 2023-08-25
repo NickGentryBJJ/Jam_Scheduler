@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser } from '../../../../store/users';
+import { fetchUser, getUser } from '../../../../store/users';
 import AttendeeListItem from '../AttendeeListItem/AttendeeListItem';
 import './EventAttendeeList.css'
 
 
 function EventAttendeeList({ eventAttendees }) {
+    debugger
     const dispatch = useDispatch();
 
     useEffect(() => {
         eventAttendees.forEach(attendee => {
-        dispatch(getUser(attendee.userId));
+        dispatch(fetchUser(attendee.userId));
         });
     }, [eventAttendees, dispatch]);
 
