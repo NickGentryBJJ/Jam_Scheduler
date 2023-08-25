@@ -4,11 +4,14 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import './EventShowItem.css'
 import EventAttendeeList from "../Attendees/EventAttendeeList/EventAttendeeList";
 import Rsvp from "../Attendees/RSVP/Rsvp";
+import { useSelector } from "react-redux";
 
 function EventShowItem({event}) {
+    const sessionUser = useSelector(state => state.session.user)
     const [parti, setParti] = useState(false)
     const [comments, setComments] = useState(false)
     const [rsvp, setRsvp] = useState(false)
+    const [resd, setResd] = useState(false)
     const history = useHistory();
     const eventAttendees = event.attendees
 
@@ -16,15 +19,25 @@ function EventShowItem({event}) {
         history.push('/')
     }
 
+    const didResQuestionMark = (atts, user) => {
+        for (let i = 0; i < atts.length; i++) {
+            const attendee = atts[i];
+            if (attendee.userId === user.id) {
+                setResd(true);
+            } else {setResd(false)}
+        }
+    }
+
+    
     const handleParti = () => {
         if (parti === false){
             setParti(true);
             setComments(false);
             setRsvp(false)
             const gButton = document.querySelector('.show-guests')
-                gButton.style.background = 'linear-gradient(45deg, green, black)';
-                gButton.style.color = 'crimson';
-                gButton.style.border = '1px solid black';
+            gButton.style.background = 'linear-gradient(45deg, green, black)';
+            gButton.style.color = 'crimson';
+            gButton.style.border = '1px solid black';
             const cButton = document.querySelector('.event-comment-button')
                 cButton.style.background = '';
                 cButton.style.color = '';
@@ -67,6 +80,7 @@ function EventShowItem({event}) {
         }
     }
     const handleRsvp = () => {
+        didResQuestionMark(eventAttendees, sessionUser);
         if (rsvp === false){
             setRsvp(true)
             setParti(false);
@@ -99,13 +113,19 @@ function EventShowItem({event}) {
                 <EventAttendeeList eventAttendees={eventAttendees}/>
             </div>
         )
-    } else if (rsvp) {
+    } else if (rsvp && !resd) {
         ness = (
             <div>
                 <Rsvp event={event}/>
             </div>
         )
-    }  else if (comments) {
+    }  else if (rsvp && resd){
+        ness = (
+            <div className="list-hidden-div">
+                <h1 className="already-rsvp">You Have Already RSVP'd to this event!</h1> 
+            </div>
+        )
+    }else if (comments) {
         ness = (
             <div>
                 {/* <CommentIndex/> */}
