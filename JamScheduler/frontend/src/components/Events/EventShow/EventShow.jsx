@@ -13,8 +13,8 @@ function EventShow() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchEvent(eventId))
-    }, [dispatch, eventId])
+        dispatch(fetchEvents())
+    }, [dispatch])
 
     const events = useSelector(state => state.events);
     const event = events[eventId - 1]
