@@ -2,8 +2,8 @@
     display: flex;
     margin-left: 12%;
     width: 65%;
-    background: linear-gradient(45deg, #ff2020, orange);
-    /* background: radial-gradient(rgb(0, 0, 204), rgb(157, 0, 255)); */
+    /* background: linear-gradient(45deg, #ff2020, orange); */
+    background: radial-gradient(rgb(0, 0, 204), rgb(157, 0, 255));
     margin-bottom: 8%;
     margin-top: 5%;
     padding: 20px;

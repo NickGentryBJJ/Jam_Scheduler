@@ -9,7 +9,8 @@
 .event-show-item-wrapper {
     display: flex;
     width: 65%;
-    background: linear-gradient(45deg, #ff2020, orange);
+    /* background: linear-gradient(45deg, #ff2020, orange); */
+    background: radial-gradient(rgb(0, 0, 204), rgb(157, 0, 255));
     margin-bottom: 5%;
     margin-top: 5%;
     padding: 20px;

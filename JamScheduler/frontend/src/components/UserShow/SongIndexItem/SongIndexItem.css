@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 5%;
-    background: linear-gradient(45deg, #ff2020, orange);
+    /* background: linear-gradient(45deg, #ff2020, orange); */
+    background: radial-gradient(rgb(0, 0, 204), rgb(157, 0, 255));
     border-radius: 10px;
     margin-bottom: 20px;
 }
