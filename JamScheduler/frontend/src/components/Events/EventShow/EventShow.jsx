@@ -8,7 +8,6 @@ import { fetchAttendees } from "../../../store/attendees";
 import EventAttendeeList from "../Attendees/EventAttendeeList/EventAttendeeList";
 
 function EventShow() {
-    debugger
     const { eventId } = useParams();
     const dispatch = useDispatch();
 

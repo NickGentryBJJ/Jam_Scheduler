@@ -6,7 +6,6 @@ import './EventAttendeeList.css'
 
 
 function EventAttendeeList({ eventAttendees }) {
-    debugger
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -19,17 +18,19 @@ function EventAttendeeList({ eventAttendees }) {
 
     return (
         <div className='attendee-list-wrapper'>
-            <h1 className='guest-list-header'>Event Guest List</h1>
+                <h1 className='list-head'>Attendee List</h1>
+            <div className='list-att-header'>
             {eventAttendees.map((attendee, index) => {
-            const user = users[attendee.userId]
-            if (user) {
-            return (
-                <AttendeeListItem attendee={attendee} user={user} index={index}/>
-            );
-            } else {
-            return null; 
-        }
-        })}
+                const user = users[attendee.userId]
+                if (user) {
+                    return (
+                        <AttendeeListItem attendee={attendee} user={user} index={index}/>
+                        );
+                    } else {
+                        return null; 
+                    }
+                })}
+            </div>
         </div>
     );
 }

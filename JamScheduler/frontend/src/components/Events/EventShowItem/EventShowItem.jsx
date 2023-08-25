@@ -10,7 +10,6 @@ function EventShowItem({event}) {
     const [comments, setComments] = useState(false)
     const [rsvp, setRsvp] = useState(false)
     const history = useHistory();
-    debugger
     const eventAttendees = event.attendees
 
     function backToIndex() {
@@ -24,7 +23,7 @@ function EventShowItem({event}) {
             setRsvp(false)
             const gButton = document.querySelector('.show-guests')
                 gButton.style.background = 'linear-gradient(45deg, green, black)';
-                gButton.style.color = 'white';
+                gButton.style.color = 'crimson';
                 gButton.style.border = '1px solid black';
             const cButton = document.querySelector('.event-comment-button')
                 cButton.style.background = '';
@@ -49,7 +48,7 @@ function EventShowItem({event}) {
             setRsvp(false)
             const cButton = document.querySelector('.event-comment-button')
                 cButton.style.background = 'linear-gradient(45deg, green, black)';
-                cButton.style.color = 'white';
+                cButton.style.color = 'crimson';
                 cButton.style.border = '1px solid black';
             const gButton = document.querySelector('.show-guests')
                 gButton.style.background = '';
@@ -74,7 +73,7 @@ function EventShowItem({event}) {
             setComments(false);
             const rButton = document.querySelector('.RSVP-button')
                 rButton.style.background = 'linear-gradient(45deg, green, black)';
-                rButton.style.color = 'white';
+                rButton.style.color = 'crimson';
                 rButton.style.border = '1px solid black';
             const gButton = document.querySelector('.show-guests')
                 gButton.style.background = '';
@@ -96,7 +95,7 @@ function EventShowItem({event}) {
 
     if (parti) {
         ness = (
-            <div>
+            <div className="list-hidden-div">
                 <EventAttendeeList eventAttendees={eventAttendees}/>
             </div>
         )
