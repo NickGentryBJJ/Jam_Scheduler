@@ -14,16 +14,17 @@ function EventAttendeeList({ eventAttendees }) {
         dispatch(fetchUser(attendee.userId));
         });
     }, [eventAttendees, dispatch]);
-
+    debugger
     return (
         <div className='attendee-list-wrapper'>
                 <h1 className='list-head'>Attendee List</h1>
             <div className='list-att-header'>
             {eventAttendees.map((attendee, index) => {
+            console.log(attendee.event)
                 const user = users[attendee.userId]
                 if (user) {
                     return (
-                        <AttendeeListItem attendee={attendee} user={user} index={index}/>
+                        <AttendeeListItem attendee={attendee} user={user} index={index} />
                         );
                     } else {
                         return null; 
