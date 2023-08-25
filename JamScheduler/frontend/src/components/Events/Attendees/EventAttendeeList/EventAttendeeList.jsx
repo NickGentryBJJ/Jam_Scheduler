@@ -7,14 +7,13 @@ import './EventAttendeeList.css'
 
 function EventAttendeeList({ eventAttendees }) {
     const dispatch = useDispatch();
+    const users = useSelector(state => state.users);
 
     useEffect(() => {
         eventAttendees.forEach(attendee => {
         dispatch(fetchUser(attendee.userId));
         });
     }, [eventAttendees, dispatch]);
-
-    const users = useSelector(state => state.users);
 
     return (
         <div className='attendee-list-wrapper'>

@@ -41,6 +41,7 @@ json.array! @events do |event|
     json.attendees event.attendees do |attendee|
       json.status attendee.status
       json.user_id attendee.user_id
+      json.id attendee.id
     end
   end
   

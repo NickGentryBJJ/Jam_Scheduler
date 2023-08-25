@@ -1,14 +1,24 @@
 import React from "react";
 import './AttendeeListItem.css'
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteAttendee } from "../../../../store/attendees";
 
 const AttendeeListItem = ({attendee, user, index}) => {
+    const dispatch = useDispatch();
     const sessionUser = useSelector(state=> state.session.user)
     const history = useHistory();
+    
     const handleUser = () => {
         history.push(`/users/${user.id}`)
     }
+
+    const handleDelete = () => {
+        debugger
+        dispatch(deleteAttendee(attendee.id))
+        history.go();
+    }
+
     let korra;
     if (attendee.status === "Going" && user.id !== sessionUser.id){
         korra = (
@@ -34,6 +44,10 @@ const AttendeeListItem = ({attendee, user, index}) => {
                 <ul className="attendee-list-cont" key={index}>
                     <li className="user-att-name" onClick={handleUser}>{user.stageName}</li>
                     <li>Status: {attendee.status}</li>
+                    <div className="mod-buttons">
+                        <button onClick={handleDelete} className="delete-status-button">Delete</button>
+                        <button className="edit-status-button">Edit</button>
+                    </div>
                 </ul>
             </div>
         )
@@ -44,8 +58,8 @@ const AttendeeListItem = ({attendee, user, index}) => {
                     <li className="user-att-name" onClick={handleUser}>{user.stageName}</li>
                     <li>Status: {attendee.status}</li>
                     <div className="mod-buttons">
-                    <button className="delete-status-button">Delete</button>
-                    <button className="edit-status-button">Edit</button>
+                        <button onClick={handleDelete} className="delete-status-button">Delete</button>
+                        <button className="edit-status-button">Edit</button>
                     </div>
                 </ul>
             </div>

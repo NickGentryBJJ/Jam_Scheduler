@@ -8,6 +8,8 @@
     margin: 20px;
     border-radius: 20px;
     color: white;
+    min-height: 50px;
+    min-width: 20%;
 }
 
 .user-att-name{
@@ -38,6 +40,9 @@
     align-items: center;
     justify-content: center;
     width: 50px;
+}
+.delete-status-button{
+    margin-right: 4px;
 }
 .edit-status-button:hover {
     background: linear-gradient(45deg, rgb(231, 0, 185), transparent);
