@@ -3,20 +3,43 @@ import UserEventInfo from "../UserEventInfo/UserEventInfo";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import './EventShowItem.css'
 import EventAttendeeList from "../Attendees/EventAttendeeList/EventAttendeeList";
+import Rsvp from "../Attendees/RSVP/Rsvp";
 
 function EventShowItem({event}) {
     const [parti, setParti] = useState(false)
+    const [comments, setComments] = useState(false)
+    const [rsvp, setRsvp] = useState(false)
     const history = useHistory();
 
     function backToIndex() {
         history.push('/')
     }
 
-    const handleClick = () => {
+    const handleParti = () => {
         if (parti === false){
-            setParti(true)
+            setParti(true);
+            setComments(false);
+            setRsvp(false)
         } else {
             setParti(false)
+        }
+    }
+    const handleComment = () => {
+        if (comments === false){
+            setComments(true);
+            setParti(false);
+            setRsvp(false)
+        } else {
+            setComments(false)
+        }
+    }
+    const handleRsvp = () => {
+        if (rsvp === false){
+            setRsvp(true)
+            setParti(false);
+            setComments(false);
+        } else {
+            setRsvp(false)
         }
     }
     let ness;
@@ -27,7 +50,20 @@ function EventShowItem({event}) {
                 <EventAttendeeList eventAttendees={event.attendees}/>
             </div>
         )
-    } else (ness = null)
+    } else if (rsvp) {
+        ness = (
+            <div>
+                <Rsvp event={event}/>
+            </div>
+        )
+    }  else if (comments) {
+        ness = (
+            <div>
+                {/* <CommentIndex/> */}
+            </div>
+        )
+    }
+    else {ness = null}
 
 
     return (
@@ -46,9 +82,9 @@ function EventShowItem({event}) {
                         <span className="event-date">{event.date}</span><br/>
                         <div className="event-buttons">
                             <button onClick={backToIndex} className="back-to-index-button">Back To All Events</button>
-                            <button onClick={handleClick} className="show-guests">Show Guests</button>
-                            <button className="event-comment-button">Add Comment</button>
-                            <button className="RSVP-button">RSVP</button>
+                            <button onClick={handleParti} className="show-guests">Show Guests</button>
+                            <button onClick={handleComment} className="event-comment-button">Add Comment</button>
+                            <button onClick={handleRsvp} className="RSVP-button">RSVP</button>
                         </div>
                     </div>
                 </div>
