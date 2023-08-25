@@ -8,6 +8,7 @@ import { fetchAttendees } from "../../../store/attendees";
 import EventAttendeeList from "../Attendees/EventAttendeeList/EventAttendeeList";
 
 function EventShow() {
+    debugger
     const { eventId } = useParams();
     const dispatch = useDispatch();
 
@@ -16,8 +17,9 @@ function EventShow() {
         dispatch(fetchAttendees())
     }, [dispatch])
 
+    
     const events = useSelector(state => state.events);
-    const event = events[eventId - 1]
+    const event = events[eventId - 1]; // Access the event with ID 1
 
 
     

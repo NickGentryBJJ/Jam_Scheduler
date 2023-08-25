@@ -82,22 +82,41 @@ export const deleteEvent = eventId => async (dispatch) => {
 
 
 
-const eventsReducer = (state = {}, action) => {
-    Object.freeze(state)
+// const eventsReducer = (state = {}, action) => {
+//     Object.freeze(state)
 
-    const nextState = Object.assign({}, state)
+//     const nextState = Object.assign({}, state)
+
+//     switch (action.type) {
+//         case RECEIVE_EVENTS:
+//             return {...action.events};
+//         case RECEIVE_EVENT:
+//             return {...state, [action.event.id]: action.event };
+//         case REMOVE_EVENT:
+//             delete nextState[action.eventId];
+//             return nextState;
+//         default:
+//             return nextState;
+//     }
+// }
+const eventsReducer = (state = {}, action) => {
+    Object.freeze(state);
+
+    const nextState = { ...state };
 
     switch (action.type) {
         case RECEIVE_EVENTS:
-            return {...action.events};
+            return { ...action.events };
         case RECEIVE_EVENT:
-            return {...state, [action.event.id]: action.event };
+            nextState[action.event.id] = action.event;
+            return nextState;
         case REMOVE_EVENT:
             delete nextState[action.eventId];
             return nextState;
         default:
             return nextState;
     }
-}
+};
+
 
 export default eventsReducer;
