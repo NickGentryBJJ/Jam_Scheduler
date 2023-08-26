@@ -28,6 +28,10 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
+.upcoming-event-container:hover{
+    width: 95%;
+    height: 60px;
+}
 .upcoming-event-title, .upcoming-event-date {
     margin-bottom: 5px;
     color: rgb(247, 187, 255);

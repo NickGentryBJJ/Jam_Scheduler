@@ -6,6 +6,7 @@ import EventAttendeeList from "../Attendees/EventAttendeeList/EventAttendeeList"
 import Rsvp from "../Attendees/RSVP/Rsvp";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteEvent, updateEvent } from "../../../store/events";
+import CommentIndex from "../Comments/CommentIndex/CommentIndex";
 
 function EventShowItem({event}) {
     const dispatch = useDispatch();
@@ -43,8 +44,8 @@ function EventShowItem({event}) {
             setRsvp(false)
             setEditing(false)
             const gButton = document.querySelector('.show-guests')
-                gButton.style.background = 'linear-gradient(45deg, green, black)';
-                gButton.style.color = 'crimson';
+                gButton.style.background = 'linear-gradient(45deg, orange, black)';
+                gButton.style.color = 'black';
                 gButton.style.border = '1px solid black';
             const cButton = document.querySelector('.event-comment-button')
                 cButton.style.background = '';
@@ -76,8 +77,8 @@ function EventShowItem({event}) {
             setRsvp(false)
             setEditing(false)
             const cButton = document.querySelector('.event-comment-button')
-                cButton.style.background = 'linear-gradient(45deg, green, black)';
-                cButton.style.color = 'crimson';
+                cButton.style.background = 'linear-gradient(45deg, orange, black)';
+                cButton.style.color = 'black';
                 cButton.style.border = '1px solid black';
             const gButton = document.querySelector('.show-guests')
                 gButton.style.background = '';
@@ -109,8 +110,8 @@ function EventShowItem({event}) {
             setParti(false);
             setComments(false);
             const rButton = document.querySelector('.RSVP-button')
-                rButton.style.background = 'linear-gradient(45deg, green, black)';
-                rButton.style.color = 'crimson';
+                rButton.style.background = 'linear-gradient(45deg, orange, black)';
+                rButton.style.color = 'black';
                 rButton.style.border = '1px solid black';
             const gButton = document.querySelector('.show-guests')
                 gButton.style.background = '';
@@ -134,8 +135,8 @@ function EventShowItem({event}) {
             setComments(false);
             setParti(false);
             const eButton = document.querySelector('.edit-event-button')
-                eButton.style.background = 'linear-gradient(45deg, green, black)';
-                eButton.style.color = 'crimson';
+                eButton.style.background = 'linear-gradient(45deg, orange, black)';
+                eButton.style.color = 'black';
                 eButton.style.border = '1px solid black';
             const gButton = document.querySelector('.show-guests')
                 gButton.style.background = '';
@@ -191,8 +192,8 @@ function EventShowItem({event}) {
     }else if (comments) {
         ness = (
             <div>
-                {/* <CommentIndex/> */}
-            </div>
+                <CommentIndex/> 
+            </div> 
         )
     }
     else {ness = null}
