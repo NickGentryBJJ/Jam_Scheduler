@@ -13,7 +13,7 @@ function EventIndexItem({event}) {
     const history = useHistory();
 
     const handleClick = () => {
-        history.push(`events/${event.id}`)
+        history.push(`/events/${event.id}`)
     }
 
   
