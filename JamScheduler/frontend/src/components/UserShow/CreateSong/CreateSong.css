@@ -49,8 +49,10 @@
     justify-content: center;
 }
 .song-button:hover {
-    background: linear-gradient(45deg, black, transparent);
-    color: #ff2020;
+    /* background: linear-gradient(45deg, black, transparent);
+    color: #ff2020; */
+    background: linear-gradient(45deg, rgb(231, 0, 185), transparent);
+    color: #07b0f9;
 }
 
 .create-label-song {
