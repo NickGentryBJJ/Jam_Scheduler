@@ -1,0 +1,45 @@
+.rsvp-wrapper{
+    background: radial-gradient(rgb(0, 0, 204), rgb(157, 0, 255));
+    border-radius: 20px;
+}
+.rsvp-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.rsvp-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-left: 15px;
+    min-width: 100%;
+}
+
+.going-span {
+    margin-right: 5px;
+}
+.rsvp-button-commit{
+    background: linear-gradient(45deg, black, #110060);
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    height: 30px;
+    padding: 3px;
+    width: 200px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 15px;
+    margin-bottom: 2vh;
+}
+
+.rsvp-button-commit:hover {
+    cursor: pointer;
+    background: linear-gradient(45deg, crimson, black);
+    color: white;
+    border: black;
+    border-style: groove;
+}

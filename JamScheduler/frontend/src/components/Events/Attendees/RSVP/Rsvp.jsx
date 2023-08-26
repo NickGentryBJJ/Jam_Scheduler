@@ -27,13 +27,12 @@ const Rsvp = ({event}) => {
             onSubmit={handleSubmit}
             className="rsvp-form"
             >
-                <label>Going
-                    <input type="radio" name="Going" onClick={()=>{setStatus("Going")}}/>
+                <label className="rsvp-label"><span className="going-span">Going</span>   <input type="radio" name="Going" onClick={()=>{setStatus("Going")}}/>
                 </label>
-                <label>Maybe
+                <label className="rsvp-label">Maybe
                     <input type="radio" name="Maybe" onClick={()=>{setStatus("Maybe")}}/>
                 </label>
-                <button type="submit">RSVP</button>
+                <button className="rsvp-button-commit" type="submit">RSVP</button>
             </form>
         </div>
     )
