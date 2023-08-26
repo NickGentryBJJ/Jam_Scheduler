@@ -38,8 +38,7 @@
 
 .rsvp-button-commit:hover {
     cursor: pointer;
-    background: linear-gradient(45deg, crimson, black);
-    color: white;
-    border: black;
+    background: linear-gradient(45deg, rgb(231, 0, 185), transparent);
+    color: #07b0f9;
     border-style: groove;
 }
