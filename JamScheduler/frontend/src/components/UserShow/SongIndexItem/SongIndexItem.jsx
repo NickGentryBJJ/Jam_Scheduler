@@ -108,7 +108,7 @@ function SongIndexItem(song) {
                     </span>
                     <h2 className="desired-instrument">
                         <span className="inst-span">
-                            {song.song.user.stageName}'s Preferred Part:
+                            Preferred Part:
                         </span> {song.song.desiredInstrument}
                     </h2>
                 </div>
@@ -133,7 +133,7 @@ function SongIndexItem(song) {
                 </span>
                 <h2 className="desired-instrument">
                     <span className="inst-span">
-                        {song.song.user.stageName}'s Preferred Part:
+                        Preferred Part:
                     </span> {song.song.desiredInstrument}
                 </h2>
             </div>
