@@ -76,13 +76,10 @@ export default function CreateEvent() {
     
     if (!sessionUser) return <Redirect to='/login' />
     return (
+    <div className='create-event-wrapper'>
         <div className='create-event-container'>
-            <div className="create-event-user-container">
-                {/* <img className="profile-image" src={sessionUser.photo}></img> */}
-                <span className="create-event-first-name">{sessionUser.stageName}</span>
-            </div>
+            <h1 className='create-event-header'>Create Event Posting!</h1>
             <form onSubmit={handleSubmit} className="create-event-form">
-                <div>
                     <div className="event-label-container">
                         <label className='create-event-title'>
                             <textarea
@@ -136,8 +133,9 @@ export default function CreateEvent() {
                         </label>
                         <button className='event-button' type='submit' >{buttonText}</button>
                     </div>
-                </div>
             </form >
         </div >
+    </div>
+        
     )
 }

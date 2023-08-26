@@ -28,9 +28,7 @@
     background: #110060;
 
 }
-.back-to-index-button, .show-guests, .event-comment-button, .RSVP-button {
-    background: linear-gradient(45deg, black, transparent);
-    color: white;
+.back-to-index-button, .show-guests, .event-comment-button, .RSVP-button, .edit-event-button {
     border-radius: 15px;
     border-style: none;
     height: 30px;
@@ -38,8 +36,6 @@
     width: 200px;
     padding-left: 6px;
     padding-right: 6px;
-    margin-top: 15px;
-    margin-bottom: 2vh;
     margin-left: 4%;
     background: linear-gradient(45deg, black, #110060);
     color: white;
@@ -53,15 +49,53 @@
     margin-top: 15px;
     margin-bottom: 2vh;
 }
-
-.back-to-index-button:hover, .show-guests:hover, .event-comment-button:hover, .RSVP-button:hover {
+.update-event-button{
+    font-size: 1.5rem;
+    color: rgb(247, 187, 255);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    background: linear-gradient(45deg, #2045ff, orange);
+    border-radius: 38px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.update-event-button:hover{
+    background: linear-gradient(45deg, rgb(231, 0, 185), transparent);
+    color: #07b0f9;
+}
+.delete-event-button {
+    background: linear-gradient(45deg, black, #110060);
+    font-size: 1.5rem;
+    color: rgb(247, 187, 255);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    border-radius: 38px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-left: 5%;
+}
+.back-to-index-button:hover, .show-guests:hover, .event-comment-button:hover, .RSVP-button:hover, .edit-event-button:hover, .delete-event-button:hover {
     cursor: pointer;
     background: linear-gradient(45deg, crimson, black);
     color: white;
     border: black;
     border-style: groove;
 }
-
+.edit-event-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .already-rsvp{
     display: flex;
     justify-content: center;

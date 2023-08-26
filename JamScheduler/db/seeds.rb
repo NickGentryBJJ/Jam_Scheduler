@@ -18,6 +18,7 @@ puts "Resetting primary keys..."
 ApplicationRecord.connection.reset_pk_sequence!('users')
 ApplicationRecord.connection.reset_pk_sequence!('events')
 ApplicationRecord.connection.reset_pk_sequence!('songs')
+ApplicationRecord.connection.reset_pk_sequence!('attendees')
 
 puts "Creating users..."
 # Create one user with an easy to remember username, email, and password:

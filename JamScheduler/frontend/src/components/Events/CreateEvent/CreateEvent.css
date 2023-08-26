@@ -1,16 +1,31 @@
 .create-event-container {
-    margin-top: 167px;
+    margin-top: 30vh;
     height: 400px;
     width: 560px;
-    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -95%);
+    background: radial-gradient(rgb(0, 0, 204), rgb(157, 0, 255));
+    height: min-content;
+    padding: 20px;
+    border-radius: 35px;
 }
-
+.create-event-wrapper{
+    height: 100vh;
+    width: 100vw;
+    background: #110060;
+}
+.create-event-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    border-bottom: groove
+}
 .create-event-user-container {
     padding-left: 15px;
     padding-right: 15px;
@@ -33,18 +48,16 @@
 
 .create-event-form {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.create-event-text:focus {
-    outline: none;
-}
-
-
-.create-event-text {
+.create-event-date-area, .create-event-name-text, .create-event-loc-text, .create-event-text{
     display: flex;
     justify-content: center;
     width: 475px;
-    height: 150px;
     resize: none;
     border: none;
     font-family: system-ui, -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -52,20 +65,41 @@
     font-weight: 300;
 }
 
-
-
-.event-button {
-    border: none;
-    color: white;
-    background-color: #0b66c2;
-    width: 67px;
-    height: 33px;
-    border-radius: 18px;
-    font-size: 15.8px;
-    cursor: pointer;
+.create-event-date-area:focus, .create-event-name-text:focus, .create-event-loc-text:focus, .create-event-text:focus {
+    outline: none;
 }
 
+
+
+.event-label-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-button {
+    height: 30px;
+    color: rgb(247, 187, 255);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    background: linear-gradient(45deg, black, #110060);
+    border-radius: 38px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    font-size: 2rem;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .event-button:hover {
-    background-color: #015b90;
+    /* background: linear-gradient(45deg, black, transparent);
+    color: #ff2020; */
+    background: linear-gradient(45deg, rgb(231, 0, 185), transparent);
+    color: #07b0f9;
 }
 
