@@ -99,14 +99,14 @@ export const deleteEvent = eventId => async (dispatch) => {
 //             return nextState;
 //     }
 // }
-const eventsReducer = (state = {}, action) => {
+const eventsReducer = (state = [], action) => {
     Object.freeze(state);
 
-    const nextState = { ...state };
+    const nextState = [ ...state ];
 
     switch (action.type) {
         case RECEIVE_EVENTS:
-            return { ...action.events };
+            return [ ...action.events ]
         case RECEIVE_EVENT:
             nextState[action.event.id] = action.event;
             return nextState;
