@@ -8,25 +8,14 @@ import { fetchAttendees } from "../../../store/attendees";
 import EventAttendeeList from "../Attendees/EventAttendeeList/EventAttendeeList";
 
 function EventShow() {
-    debugger
+
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchEvents())
     }, [dispatch])
+
     const { eventId } = useParams();
     const events = useSelector(state=>state.events);
-    // const event = useSelector(getEvent(parseInt(eventId, 10)));
-    // const eventSelector = getEvent(parseInt(eventId, 10)); // Call the getEvent selector with the eventId
-    // const event = useSelector(eventSelector);
-
-    // let event;
-
-    //     for (let i = 0; i < events.length; i++) {
-    //         const fevent = events[i];
-    //         if (fevent.id === parseInt(eventId, 10)){
-    //             event = fevent;
-    //         }
-    //     }
     const event = events.find(event => event.id === parseInt(eventId, 10));
         
     
