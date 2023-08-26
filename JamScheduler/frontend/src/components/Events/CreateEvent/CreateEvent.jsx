@@ -1,43 +1,22 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getEvent, fetchEvent, createEvent, updateEvent} from '../../../store/events'
+import { createEvent} from '../../../store/events'
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import './CreateEvent.css'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { createAttendee } from '../../../store/attendees';
 
 
 
 export default function CreateEvent() {
     const history = useHistory();
-    const { eventId } = useParams();
-    let event = useSelector(getEvent(eventId));
-    const formType = eventId ? 'Update Event' : 'Create Event';
-    const buttonText = eventId ? "Edit" : "Create"
     const dispatch = useDispatch();
-    const [photoFile, setPhotoFile] = useState("");
-    const [photoUrl, setPhotoUrl] = useState("");
     const [title, setTitle] = useState("");
     const [details, setDetails] = useState("");
     const [date, setDate] = useState("");
     const [location, setLocation] = useState("");
-    
-    if (formType === 'Create Event') {
-        event = {
-            title: '',
-            details: '',
-            date: ''
-        }
-    }
-    
-    const sessionUser = useSelector(state => state.session.user)
-    useEffect(() => {
-        if (formType === 'Update Event'){
-            dispatch(fetchEvent(eventId))
-        }
-    }, [])
+    const sessionUser = useSelector(state => state.session.user);
 
-    
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
@@ -47,34 +26,18 @@ export default function CreateEvent() {
         formData.append('event[date]', date);
         formData.append('event[userId]', sessionUser.id );
 
-
-        if (photoFile) {
-            formData.append('event[photo]', photoFile);
-        }
+        // const aFormData = new FormData();
+        // aFormData.append('attendee[status]', "Going");
+        // aFormData.append('attendee[userId]', sessionUser.id );
+        // aFormData.append('attendee[eventId]', eventId);
         
+        dispatch(createEvent(formData)).then(() => history.push('/'));    
+        // dispatch(createAttendee(aFormData))
         
-        if (formType === 'Create Event') {
-            dispatch(createEvent(formData)).then(() => history.push('/'));    
-        } else {
-            dispatch(updateEvent(event, formData)).then(() => history.push('/'));
-        }
-        
-    }
-
-    const handleFile = ({ currentTarget }) => {
-        const file = currentTarget.files[0];
-        setPhotoFile(file);
-        if (file) {
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(file);
-            fileReader.onload = () => setPhotoUrl(fileReader.result);
-        }  else setPhotoUrl(null);
-    }
-    
-    
-    
-    
+    }    
     if (!sessionUser) return <Redirect to='/login' />
+    
+    
     return (
     <div className='create-event-wrapper'>
         <div className='create-event-container'>
@@ -116,7 +79,6 @@ export default function CreateEvent() {
                                 }}
                                 required
                             ></textarea>
-                            {/* <input type="file" onChange={handleFile} /> */}
                         </label>
                         <label className='create-event-date'>
                             <textarea
@@ -129,9 +91,8 @@ export default function CreateEvent() {
                                 }}
                                 required
                             ></textarea>
-                            {/* <input type="file" onChange={handleFile} /> */}
                         </label>
-                        <button className='event-button' type='submit' >{buttonText}</button>
+                        <button className='event-button' type='submit' >Create Event</button>
                     </div>
             </form >
         </div >

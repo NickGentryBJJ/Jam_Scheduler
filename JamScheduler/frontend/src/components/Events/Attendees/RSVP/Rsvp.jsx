@@ -17,9 +17,7 @@ const Rsvp = ({event}) => {
         formData.append('attendee[status]', status);
         formData.append('attendee[eventId]', eventId);
         formData.append('attendee[userId]', sessionUser.id );
-
         dispatch(createAttendee(formData)).then(() => history.go());    
-
     }
     return (
         <div className="rsvp-wrapper">
