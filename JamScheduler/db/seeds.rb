@@ -565,6 +565,16 @@ Event.create!(
 )
 
 puts "Events Finished! Exciting!"
+puts "Adding event comments"
+
+EventComment.create!(
+  user_id: 2,
+  event_id: 1,
+  body: "Maybe"
+)
+
+
+puts "EVENT COMMENTs ADDED"
 puts "Adding Attendees Fingers Crossed!"
 puts "mothafucka!"
 
